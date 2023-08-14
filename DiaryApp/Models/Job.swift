@@ -7,10 +7,12 @@
 
 import Foundation
 
-enum Job {
-    case student
-    case it
-    case soldier
-    case doctor
-    case teacher
+enum Job: String {
+    case student = "학생"
+    case it = "개발자"
+    case soldier = "군인"
+    case doctor = "의사"
+    case teacher = "선생님"
+    
+    var title: String { rawValue }
 }
