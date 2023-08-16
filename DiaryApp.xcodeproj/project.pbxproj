@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054D40B72A8C584F00408AD1 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054D40B62A8C584F00408AD1 /* HomePage.storyboard */; };
+		054D40B92A8C586A00408AD1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40B82A8C586A00408AD1 /* HomePageViewController.swift */; };
+		054D40BB2A8C58B400408AD1 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054D40BA2A8C58B400408AD1 /* TabBar.storyboard */; };
+		054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */; };
 		330226B92A89F3F60070514E /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226B82A89F3F60070514E /* Diary.swift */; };
 		330226BC2A89F4160070514E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BB2A89F4160070514E /* Profile.swift */; };
 		330226BE2A89FA290070514E /* AgeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BD2A89FA290070514E /* AgeGroup.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054D40B62A8C584F00408AD1 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		054D40B82A8C586A00408AD1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		054D40BA2A8C58B400408AD1 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		330226B82A89F3F60070514E /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		330226BB2A89F4160070514E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		330226BD2A89FA290070514E /* AgeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroup.swift; sourceTree = "<group>"; };
@@ -64,6 +72,10 @@
 		332144572A89C751008E1AFF = {
 			isa = PBXGroup;
 			children = (
+				054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */,
+				054D40BA2A8C58B400408AD1 /* TabBar.storyboard */,
+				054D40B82A8C586A00408AD1 /* HomePageViewController.swift */,
+				054D40B62A8C584F00408AD1 /* HomePage.storyboard */,
 				332144622A89C751008E1AFF /* DiaryApp */,
 				332144612A89C751008E1AFF /* Products */,
 			);
@@ -159,6 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054D40BB2A8C58B400408AD1 /* TabBar.storyboard in Resources */,
+				054D40B72A8C584F00408AD1 /* HomePage.storyboard in Resources */,
 				332144702A89C752008E1AFF /* LaunchScreen.storyboard in Resources */,
 				3321446D2A89C752008E1AFF /* Assets.xcassets in Resources */,
 				3321446B2A89C751008E1AFF /* Main.storyboard in Resources */,
@@ -174,12 +188,14 @@
 			files = (
 				332144682A89C751008E1AFF /* ViewController.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
+				054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */,
 				332144642A89C751008E1AFF /* AppDelegate.swift in Sources */,
 				330226C22A8A05300070514E /* Emotion.swift in Sources */,
 				332144662A89C751008E1AFF /* SceneDelegate.swift in Sources */,
 				330226B92A89F3F60070514E /* Diary.swift in Sources */,
 				330226C02A89FBB20070514E /* Job.swift in Sources */,
 				33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */,
+				054D40B92A8C586A00408AD1 /* HomePageViewController.swift in Sources */,
 				330226BE2A89FA290070514E /* AgeGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +348,7 @@
 				INFOPLIST_FILE = DiaryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -364,7 +380,7 @@
 				INFOPLIST_FILE = DiaryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
