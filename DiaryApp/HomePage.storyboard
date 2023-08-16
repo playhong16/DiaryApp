@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,27 +20,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="isd-rR-PZ4">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="Bjf-Jt-82c">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGi-Ge-WWq">
-                                            <rect key="frame" x="321" y="6" width="64" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <menu key="menu" id="7Tf-R2-bOo">
-                                                <children>
-                                                    <command title="전체" id="Nk1-3S-ujx"/>
-                                                    <command title="연령대별" id="1Yk-ah-aga"/>
-                                                </children>
-                                            </menu>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomePageCell" id="HAJ-S0-rvI" customClass="HomePageCell" customModule="DiaryApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="94" width="393" height="80"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HAJ-S0-rvI" id="qvk-AC-qqL">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
@@ -69,30 +50,45 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqL-lj-N1M">
-                                                    <rect key="frame" x="333" y="40" width="50" height="35"/>
+                                                    <rect key="frame" x="334" y="40" width="49" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup" catalog="system"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="heart.text.square" catalog="system"/>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-6Y-q3l">
+                                <rect key="frame" x="293" y="679" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="wCl-9b-uxz"/>
+                                    <constraint firstAttribute="height" constant="70" id="y5v-vG-iGd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="isd-rR-PZ4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0OR-7r-fG3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="isd-rR-PZ4" secondAttribute="trailing" id="ESC-Yr-6VT"/>
+                            <constraint firstItem="isd-rR-PZ4" firstAttribute="bottom" secondItem="eEu-6Y-q3l" secondAttribute="bottom" constant="20" id="EbW-dZ-Onk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="isd-rR-PZ4" secondAttribute="bottom" id="TOr-e8-1UW"/>
                             <constraint firstItem="isd-rR-PZ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="byX-tM-nS8"/>
+                            <constraint firstItem="isd-rR-PZ4" firstAttribute="trailing" secondItem="eEu-6Y-q3l" secondAttribute="trailing" constant="30" id="rhE-yA-SLd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="owl-0b-pmc"/>
                     <connections>
-                        <outlet property="tableView" destination="isd-rR-PZ4" id="aCF-BL-5Qu"/>
+                        <outlet property="floatingActionButton" destination="eEu-6Y-q3l" id="Msi-sV-uff"/>
+                        <outlet property="tableView" destination="isd-rR-PZ4" id="lqf-NH-SgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,8 +117,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
+        <image name="heart.text.square" catalog="system" width="128" height="114"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,18 +7,41 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+final class HomePageViewController: UIViewController {
     
-    let dataManager = DataManager.shared
+    // MARK: - Properties
+
+    private let dataManager = DataManager.shared
     
-    @IBOutlet var tableView: UITableView!
+    // MARK: - Interface Builder Outlet
+
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var floatingActionButton: UIButton!
     
+    // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+    }
+    
+    // MARK: - Configure
+
+    private func configureUI() {
+        configureTableView()
+        configureFloatingActionButton()
+    }
+    
+    private func configureTableView() {
         tableView.dataSource = self
     }
-
     
+    private func configureFloatingActionButton() {
+        floatingActionButton.backgroundColor = .customYellow
+        floatingActionButton.layer.cornerRadius = 0.5 * floatingActionButton.bounds.size.width
+        floatingActionButton.layer.borderWidth = 1
+        floatingActionButton.layer.borderColor = UIColor.white.cgColor
+    }
 }
 
 // MARK: - Extension

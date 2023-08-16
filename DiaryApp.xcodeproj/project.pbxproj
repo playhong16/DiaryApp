@@ -13,6 +13,7 @@
 		054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */; };
 		054D40BF2A8C943300408AD1 /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40BE2A8C943300408AD1 /* HomePageCell.swift */; };
 		054D40C12A8CA1F600408AD1 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40C02A8CA1F600408AD1 /* FloatingActionButton.swift */; };
+		054D40C42A8CC45300408AD1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40C32A8CC45300408AD1 /* UIColor.swift */; };
 		330226B92A89F3F60070514E /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226B82A89F3F60070514E /* Diary.swift */; };
 		330226BC2A89F4160070514E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BB2A89F4160070514E /* Profile.swift */; };
 		330226BE2A89FA290070514E /* AgeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BD2A89FA290070514E /* AgeGroup.swift */; };
@@ -34,6 +35,7 @@
 		054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		054D40BE2A8C943300408AD1 /* HomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
 		054D40C02A8CA1F600408AD1 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		054D40C32A8CC45300408AD1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		330226B82A89F3F60070514E /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		330226BB2A89F4160070514E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		330226BD2A89FA290070514E /* AgeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroup.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		054D40C22A8CC44000408AD1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				054D40C32A8CC45300408AD1 /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		330226BA2A89F3F90070514E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		332144622A89C751008E1AFF /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				054D40C22A8CC44000408AD1 /* Extension */,
 				054D40BE2A8C943300408AD1 /* HomePageCell.swift */,
 				054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */,
 				054D40B82A8C586A00408AD1 /* HomePageViewController.swift */,
@@ -193,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				332144682A89C751008E1AFF /* ViewController.swift in Sources */,
+				054D40C42A8CC45300408AD1 /* UIColor.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
 				054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */,
 				054D40BF2A8C943300408AD1 /* HomePageCell.swift in Sources */,

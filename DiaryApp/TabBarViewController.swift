@@ -8,6 +8,13 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tabBar.tintColor = .customYellow
+        tabBar.unselectedItemTintColor = .lightGray
+    }
+    
 }
 

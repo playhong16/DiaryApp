@@ -9,7 +9,11 @@ import UIKit
 
 class HomePageCell: UITableViewCell {
     
+    // MARK: - Properties
+
     static let identifier = "HomePageCell"
+
+    // MARK: - Life Cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
