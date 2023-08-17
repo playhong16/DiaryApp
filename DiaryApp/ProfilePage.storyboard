@@ -157,12 +157,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normalProfile" translatesAutoresizingMaskIntoConstraints="NO" id="klw-Zc-zcy">
-                                <rect key="frame" x="97" y="103" width="199" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Hzz-5E-cdg"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-0O-AwJ">
                                 <rect key="frame" x="20" y="721" width="353" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -205,10 +199,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직업군" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQF-yb-uph">
-                                <rect key="frame" x="20" y="579" width="43" height="20"/>
+                                <rect key="frame" x="20.000000000000004" y="579" width="44.333333333333343" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="WPb-Rz-haZ"/>
-                                    <constraint firstAttribute="width" constant="45" id="i7l-an-9lH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -235,6 +228,12 @@
                                     <action selector="selectAgeGroupButtonTapped:" destination="FFr-6s-uUc" eventType="touchUpInside" id="Aax-Gz-CsV"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normalProfile" translatesAutoresizingMaskIntoConstraints="NO" id="klw-Zc-zcy">
+                                <rect key="frame" x="97" y="103" width="199" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Hzz-5E-cdg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gp5-9H-bCo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -244,6 +243,7 @@
                             <constraint firstItem="Fb4-ug-xyN" firstAttribute="leading" secondItem="Gp5-9H-bCo" secondAttribute="leading" constant="20" id="9BP-Cc-nbs"/>
                             <constraint firstItem="bKN-cS-oLe" firstAttribute="top" secondItem="Fb4-ug-xyN" secondAttribute="bottom" id="9on-87-3K2"/>
                             <constraint firstItem="Fb4-ug-xyN" firstAttribute="leading" secondItem="bKN-cS-oLe" secondAttribute="leading" id="E8Y-Ma-4bc"/>
+                            <constraint firstItem="sQF-yb-uph" firstAttribute="leading" secondItem="M7s-Sb-jQN" secondAttribute="leading" id="GeG-Yt-K4e"/>
                             <constraint firstItem="J9p-7G-Z9Y" firstAttribute="top" secondItem="cDL-L3-arW" secondAttribute="bottom" id="HAt-lG-4vQ"/>
                             <constraint firstItem="bKN-cS-oLe" firstAttribute="leading" secondItem="Gp5-9H-bCo" secondAttribute="leading" constant="20" id="KPq-PC-bPh"/>
                             <constraint firstItem="cx2-0O-AwJ" firstAttribute="leading" secondItem="Gp5-9H-bCo" secondAttribute="leading" constant="20" id="ScK-Ww-T34"/>
@@ -260,13 +260,12 @@
                             <constraint firstItem="klw-Zc-zcy" firstAttribute="top" secondItem="Gp5-9H-bCo" secondAttribute="top" id="mcK-QH-DE6"/>
                             <constraint firstItem="cx2-0O-AwJ" firstAttribute="top" secondItem="M7s-Sb-jQN" secondAttribute="bottom" constant="85" id="miZ-LJ-Di0"/>
                             <constraint firstItem="Gp5-9H-bCo" firstAttribute="trailing" secondItem="J9p-7G-Z9Y" secondAttribute="trailing" constant="20" id="oVH-SF-K8m"/>
-                            <constraint firstItem="sQF-yb-uph" firstAttribute="leading" secondItem="Gp5-9H-bCo" secondAttribute="leading" constant="20" id="seS-LR-wLj"/>
                             <constraint firstItem="J9p-7G-Z9Y" firstAttribute="leading" secondItem="Gp5-9H-bCo" secondAttribute="leading" constant="20" id="tx9-JD-BRg"/>
-                            <constraint firstItem="Gp5-9H-bCo" firstAttribute="trailing" secondItem="sQF-yb-uph" secondAttribute="trailing" constant="330" id="vla-3u-W6G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="프로필 수정" id="Nzl-e5-MLB"/>
                     <connections>
+                        <outlet property="editCompleteButton" destination="cx2-0O-AwJ" id="2kz-rZ-vzk"/>
                         <outlet property="nicknameTextField" destination="bKN-cS-oLe" id="MgD-oi-gkP"/>
                         <outlet property="profileImageView" destination="klw-Zc-zcy" id="IeG-bV-FVq"/>
                         <outlet property="selectAgeGroupButton" destination="J9p-7G-Z9Y" id="pyy-C3-0In"/>

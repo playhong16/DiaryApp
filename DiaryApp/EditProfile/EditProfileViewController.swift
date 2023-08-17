@@ -7,15 +7,15 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextFieldDelegate {
+class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
     
 
- 
+    @IBOutlet weak var editCompleteButton: UIButton!
+    
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var nicknameTextField: UITextField!
    
-    
     @IBOutlet weak var selectAgeGroupButton: UIButton!
  
     
@@ -47,12 +47,17 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
             //키보드 보일때
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
             //키보드 숨겼을때
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
+        profileImageView.addGestureRecognizer(tapGesture)
+        profileImageView.isUserInteractionEnabled = true
     }
     
     deinit {
           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
       }
     
+
     @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
             let keyboardHeight = keyboardFrame.size.height - view.safeAreaInsets.bottom
@@ -97,5 +102,50 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         }
     }
     
-}
+    @objc func profileImageTapped() {
+        showImagePickerAlert()
+    }
+    
+    func showImagePickerAlert() {
+        let alertController = UIAlertController(title: "프로필 사진 변경", message: "사진을 선택하세요", preferredStyle: .actionSheet)
+        
+        let albumAction = UIAlertAction(title: "내 앨범", style: .default) { _ in
+            self.showImagePicker(sourceType: .photoLibrary)
+        }
+        
+        let cameraAction = UIAlertAction(title: "카메라", style: .default) { _ in
+            self.showImagePicker(sourceType: .camera)
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alertController.addAction(albumAction)
+        alertController.addAction(cameraAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showImagePicker(sourceType: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func changeProfilePicture() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            profileImageView.image = selectedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
 
+    
+}
