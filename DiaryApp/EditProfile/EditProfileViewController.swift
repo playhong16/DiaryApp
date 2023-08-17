@@ -9,22 +9,22 @@ import UIKit
 
 class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
     
-
+    
     @IBOutlet weak var editCompleteButton: UIButton!
     
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var nicknameTextField: UITextField!
-   
+    
     @IBOutlet weak var selectAgeGroupButton: UIButton!
- 
+    
     
     var userProfile = Profile(nickName: "", age: .twenties, job: .student)
-
+    
     
     var selectedAgeGroup: AgeGroup = .twenties
     // 연련대 기본 선택 (20대)
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +35,23 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         selectAgeGroupButton.layer.borderWidth = 1.0
         selectAgeGroupButton.layer.borderColor = UIColor.gray.cgColor
         selectAgeGroupButton.layer.cornerRadius = 5.0
-           // 연령대 버튼 테두리 설정
+        // 연령대 버튼 테두리 설정
         
+        profileImageView.contentMode = .scaleAspectFit
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        profileImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive =  true
+        profileImageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
+            //이미지 크기 설정
         
         nicknameTextField.text = userProfile.nickName
-         nicknameTextField.placeholder = "닉네임"
-         nicknameTextField.delegate = self
+        nicknameTextField.placeholder = "닉네임"
+        nicknameTextField.delegate = self
         // 키보드 설정
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-            //키보드 보일때
+        //키보드 보일때
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-            //키보드 숨겼을때
+        //키보드 숨겼을때
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
         profileImageView.addGestureRecognizer(tapGesture)
@@ -54,10 +59,10 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     }
     
     deinit {
-          NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-      }
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
     
-
+    
     @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
             let keyboardHeight = keyboardFrame.size.height - view.safeAreaInsets.bottom
@@ -92,13 +97,22 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         ageGroupVC.selectedAgeGroup = selectedAgeGroup
         let navController = UINavigationController(rootViewController: ageGroupVC)
         present(navController, animated: true, completion: nil)
+
+        
     } // 선택 화면을 모달로 보여주는 메서드
+    
     
     func didSelectAgeGroup(_ ageGroup: AgeGroup?) {
         if let selectedAgeGroup = ageGroup {
             // 선택된 연령대로 버튼의 타이틀 변경
+            self.selectedAgeGroup = selectedAgeGroup
+            
             selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
             //프린트
+            
+            let defaults = UserDefaults.standard
+                   defaults.set(selectedAgeGroup.title, forKey: "selectedAgeGroup")
+               
         }
     }
     
@@ -146,6 +160,32 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         }
         picker.dismiss(animated: true, completion: nil)
     }
-
     
+    var editedNickname: String?
+    var editedImage: UIImage?
+    var editedAgeGroup: AgeGroup?
+    
+    @IBAction func editCompleteButton(_ sender: UIButton) {
+       
+        
+        editedNickname = nicknameTextField.text
+        editedImage = profileImageView.image
+        editedAgeGroup = selectedAgeGroup
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.set(editedNickname, forKey: "editedNickname")
+        
+        if let imageData = editedImage?.jpegData(compressionQuality: 1.0) {
+            defaults.set(imageData, forKey: "editedImage")
+        }
+        
+        if let selectedAgeGroupTitle = editedAgeGroup?.title {
+            defaults.set(selectedAgeGroupTitle, forKey: "editedAgeGroup")
+        }
+        if let profileVC = UIStoryboard(name: "ProfilePage", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
+              navigationController?.pushViewController(profileVC, animated: true)
+          }
+        
+    }
 }

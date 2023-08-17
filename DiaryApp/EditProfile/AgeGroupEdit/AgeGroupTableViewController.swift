@@ -19,18 +19,13 @@ class AgeGroupTableViewController: UITableViewController {
     var selectedAgeGroup: AgeGroup?
     
     let ageGroups: [AgeGroup] = [.teenager, .twenties, .thirties, .forties, .etc]
-       //선택 목록 배열
+        //선택 목록 배열
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "AgeGroupCell")
         // 테이블뷰의 셀 등록
         }
-//    
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//            return 1
-//        }
-
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ageGroups.count
@@ -47,6 +42,9 @@ class AgeGroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedAgeGroup = ageGroups[indexPath.row]
+        let defaults = UserDefaults.standard
+           defaults.set(selectedAgeGroup.title, forKey: "selectedAgeGroup")
+           
         delegate?.didSelectAgeGroup(selectedAgeGroup)
         dismiss(animated: true, completion: nil)
     }
