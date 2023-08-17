@@ -9,25 +9,31 @@ import UIKit
 
 final class HomePageViewController: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - Type Properties
 
     private let dataManager = DataManager.shared
     
     // MARK: - Interface Builder Outlet
 
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var floatingActionButton: UIButton!
     
+    // MARK: - Properties
+    
+    private var ageGroupMenu: UIMenu {
+        let menu = UIMenu(title: "연령대별",children: createAgeGroupMenu())
+        return menu
+    }
+    
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        getFontName()
+        view.backgroundColor = .creamYellow
     }
     
     // MARK: - Configure
@@ -36,20 +42,15 @@ final class HomePageViewController: UIViewController {
         configureTableView()
         configureFloatingActionButton()
         configureCategoryButton()
+        configureLabel()
     }
     
     private func configureTableView() {
-        view.backgroundColor = .creamYellow
-//        titleLabel.font = UIFont(name: "NanumSquareRoundB", size: 26)
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 30)
-        dateLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 16)
-        dateLabel.textColor = .customYellow
-        titleLabel.textColor = .black
         tableView.dataSource = self
-        tableView.backgroundColor = .clear
     }
     
     func configureCategoryButton() {
+        categoryButton.menu = ageGroupMenu
         categoryButton.titleLabel?.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 16)
         categoryButton.backgroundColor = .white
         categoryButton.layer.borderWidth = 1
@@ -64,17 +65,32 @@ final class HomePageViewController: UIViewController {
         floatingActionButton.layer.borderColor = UIColor.creamYellow.cgColor
     }
     
-    func getFontName() {
-            for family in UIFont.familyNames {
-
-                let sName: String = family as String
-                print("family: \(sName)")
-                        
-                for name in UIFont.fontNames(forFamilyName: sName) {
-                    print("name: \(name as String)")
-                }
-            }
+    private func configureLabel() {
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 30)
+        titleLabel.textColor = .black
+        dateLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 16)
+        dateLabel.textColor = .customYellow
+    }
+    
+    private func createAgeGroupMenu() -> [UIAction] {
+        let allAges = UIAction(title: "전체") { action in
+            self.categoryButton.titleLabel?.text = action.title
         }
+        let teenager = UIAction(title: AgeGroup.teenager.title) { action in
+            self.categoryButton.titleLabel?.text = action.title
+        }
+        let twenties = UIAction(title: AgeGroup.twenties.title) { action in
+            self.categoryButton.titleLabel?.text = action.title
+        }
+        let thirties = UIAction(title: AgeGroup.thirties.title) { action in
+            self.categoryButton.titleLabel?.text = action.title
+        }
+        let forties = UIAction(title: AgeGroup.forties.title) { action in
+            self.categoryButton.titleLabel?.text = action.title
+        }
+        let menuItems = [allAges, teenager, twenties, thirties, forties]
+        return menuItems
+    }
 }
 
 // MARK: - Extension
@@ -88,21 +104,8 @@ extension HomePageViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomePageCell.identifier, for: indexPath) as? HomePageCell else {
             return UITableViewCell()
         }
-        let diraryList = dataManager.getDiary()
-        cell.selectionStyle = .none
-        cell.titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 22)
-        cell.nicknameLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 18)
-        cell.timeLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 18)
-//        cell.titleLabel.font = UIFont(name: "NanumSquareRoundL", size: 16)
-//        cell.timeLabel.font = UIFont(name: "NanumSquareRoundL", size: 12)
-//        cell.nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 12)
-        cell.titleLabel.text = diraryList[indexPath.row].title
-        cell.moodLabel.text = diraryList[indexPath.row].emotion
-        cell.configureCell()
+        let diary = dataManager.getDiary()[indexPath.row]
+        cell.setupData(diary)
         return cell
     }
-    
-    
-    
-    
 }

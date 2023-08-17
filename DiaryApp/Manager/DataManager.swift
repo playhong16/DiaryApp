@@ -11,7 +11,9 @@ final class DataManager {
     static let shared = DataManager()
     private init() { }
     
-    private var DiaryList: [Diary] = []
+    private var DiaryList: [Diary] = [
+        Diary(title: "swift 공부하자", date: Date(), emotion: Emotion.happy.title, content: "")
+    ]
 
     func saveDiary(data: Diary) {
         DiaryList.append(data)

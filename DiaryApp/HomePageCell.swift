@@ -9,7 +9,7 @@ import UIKit
 
 class HomePageCell: UITableViewCell {
     
-    // MARK: - Properties
+    // MARK: - Type Properties
 
     static let identifier = "HomePageCell"
     
@@ -20,6 +20,9 @@ class HomePageCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    // MARK: - Properties
+
+
     // MARK: - Life Cycle
 
     override func awakeFromNib() {
@@ -37,11 +40,24 @@ class HomePageCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10))
     }
     
-    func configureCell() {
-        self.backgroundColor = .creamYellow
+    func setupData(_ diary: Diary) {
+        titleLabel.text = diary.title
+        nicknameLabel.text = "개굴개굴개구리" // 임시
+        moodLabel.text = diary.emotion
+        timeLabel.text = "14시 30분"
+        configureUI()
+    }
+    
+    private func configureUI() {
+        configureContentView()
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 22)
+        nicknameLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 18)
+        timeLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 18)
+    }
+    
+    private func configureContentView() {
         contentView.layer.cornerRadius = 10
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.customYellow.cgColor
     }
-
 }
