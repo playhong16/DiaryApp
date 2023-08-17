@@ -183,6 +183,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         if let selectedAgeGroupTitle = editedAgeGroup?.title {
             defaults.set(selectedAgeGroupTitle, forKey: "editedAgeGroup")
         }
+        
         if let profileVC = UIStoryboard(name: "ProfilePage", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
               navigationController?.pushViewController(profileVC, animated: true)
           }

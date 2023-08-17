@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSa-XB-g13">
-                                <rect key="frame" x="20" y="634" width="353" height="135"/>
+                                <rect key="frame" x="20" y="721" width="353" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="editPorfile"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2Z-bN-kHF">
-                                <rect key="frame" x="160" y="189" width="213" height="35"/>
+                                <rect key="frame" x="150" y="189" width="223" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="UTk-PV-Wuu"/>
                                 </constraints>
@@ -62,7 +62,10 @@
                                     <constraint firstAttribute="height" constant="35" id="ENU-kS-cUK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="좋아요 목록(미구현)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="좋아요 목록"/>
+                                <connections>
+                                    <segue destination="MyE-zd-m2R" kind="show" id="e1b-cO-ELL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미구현" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0y-UY-7Zo">
                                 <rect key="frame" x="20" y="439" width="353" height="35"/>
@@ -83,12 +86,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTA-8H-R5U">
+                                <rect key="frame" x="150" y="164" width="45" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fWx-Kg-G9G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UDp-aJ-thQ" secondAttribute="trailing" constant="20" id="1Vq-90-kwc"/>
+                            <constraint firstItem="e2Z-bN-kHF" firstAttribute="leading" secondItem="V5K-Tx-8tP" secondAttribute="trailing" constant="10" id="2yI-nX-te2"/>
                             <constraint firstItem="UDp-aJ-thQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6TO-RW-iJw"/>
+                            <constraint firstItem="FTA-8H-R5U" firstAttribute="leading" secondItem="V5K-Tx-8tP" secondAttribute="trailing" constant="10" id="6vC-gJ-5hs"/>
                             <constraint firstItem="dSG-KQ-bcC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="JRK-kt-rR1"/>
                             <constraint firstItem="X0y-UY-7Zo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KLN-S4-dbr"/>
                             <constraint firstItem="V5K-Tx-8tP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="RJJ-QZ-F95"/>
@@ -96,11 +110,10 @@
                             <constraint firstItem="V5K-Tx-8tP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="V3x-bK-eDh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X0y-UY-7Zo" secondAttribute="trailing" constant="20" id="VxE-RI-oRr"/>
                             <constraint firstItem="QsB-FM-qfN" firstAttribute="top" secondItem="X0y-UY-7Zo" secondAttribute="bottom" constant="75" id="W2w-05-T9L"/>
+                            <constraint firstItem="e2Z-bN-kHF" firstAttribute="top" secondItem="FTA-8H-R5U" secondAttribute="bottom" constant="5" id="e0o-dd-1QE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QsB-FM-qfN" secondAttribute="trailing" constant="20" id="eRg-Ab-DHm"/>
                             <constraint firstItem="lSa-XB-g13" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hco-uA-NbS"/>
                             <constraint firstItem="lSa-XB-g13" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="hjB-oY-WrW"/>
-                            <constraint firstItem="e2Z-bN-kHF" firstAttribute="leading" secondItem="V5K-Tx-8tP" secondAttribute="trailing" constant="20" id="l90-5H-cA4"/>
-                            <constraint firstItem="lSa-XB-g13" firstAttribute="top" secondItem="QsB-FM-qfN" secondAttribute="bottom" constant="50" id="lG2-Hd-uxZ"/>
                             <constraint firstItem="X0y-UY-7Zo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lhJ-eP-BbI"/>
                             <constraint firstItem="6O5-F5-F9h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="mty-4L-IgA"/>
                             <constraint firstItem="6O5-F5-F9h" firstAttribute="top" secondItem="V5K-Tx-8tP" secondAttribute="bottom" constant="75" id="nqE-Z2-UNr"/>
@@ -124,6 +137,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1918.3206106870227" y="-34.507042253521128"/>
+        </scene>
+        <!--좋아요 목록-->
+        <scene sceneID="o6O-6f-10T">
+            <objects>
+                <viewController id="MyE-zd-m2R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y2W-0S-rBD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sUQ-r4-Hhj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="좋아요 목록" id="6yW-oi-qI7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbM-3j-7G6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918" y="663"/>
         </scene>
         <!--프로필 수정-->
         <scene sceneID="FYU-w4-jh4">
@@ -313,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdD-v5-Op1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="92"/>
+            <point key="canvasLocation" x="3353" y="-35"/>
         </scene>
     </scenes>
     <resources>

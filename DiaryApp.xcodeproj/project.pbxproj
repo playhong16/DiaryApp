@@ -21,7 +21,6 @@
 		33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8DA5D2A8A211600D44B2C /* DataManager.swift */; };
 		9B8BF7922A8C76E5005C230F /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */; };
 		9B8BF7942A8C77C3005C230F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */; };
-		9B8BF7962A8C8AC7005C230F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7952A8C8AC7005C230F /* ProfileTableViewCell.swift */; };
 		9B8BF7982A8CBB20005C230F /* AgeGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */; };
 		9B8BF79A2A8CBC2D005C230F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */; };
 		9B8BF79C2A8CC836005C230F /* AgeGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */; };
@@ -44,7 +43,6 @@
 		33B8DA5D2A8A211600D44B2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		9B8BF7952A8C8AC7005C230F /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewController.swift; sourceTree = "<group>"; };
 		9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,8 +94,6 @@
 				332144632A89C751008E1AFF /* AppDelegate.swift */,
 				332144652A89C751008E1AFF /* SceneDelegate.swift */,
 				332144672A89C751008E1AFF /* ViewController.swift */,
-				9B8BF7952A8C8AC7005C230F /* ProfileTableViewCell.swift */,
-				9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */,
 				9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */,
 				332144692A89C751008E1AFF /* Main.storyboard */,
 				33B8DA5F2A8A211F00D44B2C /* Manager */,
@@ -120,19 +116,12 @@
 		9B8BF79D2A8CE219005C230F /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */,
 				9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */,
-				9B8BF79E2A8CE243005C230F /* AgeGroupEdit */,
+				9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */,
+				9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */,
 			);
 			path = EditProfile;
-			sourceTree = "<group>";
-		};
-		9B8BF79E2A8CE243005C230F /* AgeGroupEdit */ = {
-			isa = PBXGroup;
-			children = (
-				9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */,
-				9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */,
-			);
-			path = AgeGroupEdit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +199,6 @@
 				332144682A89C751008E1AFF /* ViewController.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
 				9B8BF7942A8C77C3005C230F /* ProfileViewController.swift in Sources */,
-				9B8BF7962A8C8AC7005C230F /* ProfileTableViewCell.swift in Sources */,
 				332144642A89C751008E1AFF /* AppDelegate.swift in Sources */,
 				330226C22A8A05300070514E /* Emotion.swift in Sources */,
 				332144662A89C751008E1AFF /* SceneDelegate.swift in Sources */,
