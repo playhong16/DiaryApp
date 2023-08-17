@@ -27,6 +27,7 @@
 		3321446B2A89C751008E1AFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332144692A89C751008E1AFF /* Main.storyboard */; };
 		3321446D2A89C752008E1AFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3321446C2A89C752008E1AFF /* Assets.xcassets */; };
 		332144702A89C752008E1AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3321446E2A89C752008E1AFF /* LaunchScreen.storyboard */; };
+		33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33233AEE2A8D39F200418F37 /* ProfileManager.swift */; };
 		33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8DA5D2A8A211600D44B2C /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		3321446C2A89C752008E1AFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3321446F2A89C752008E1AFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		332144712A89C752008E1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33233AEE2A8D39F200418F37 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		33B8DA5D2A8A211600D44B2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				33B8DA5D2A8A211600D44B2C /* DataManager.swift */,
+				33233AEE2A8D39F200418F37 /* ProfileManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				332144682A89C751008E1AFF /* ViewController.swift in Sources */,
 				054D40C42A8CC45300408AD1 /* UIColor.swift in Sources */,
+				33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
 				054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */,
 				054D40BF2A8C943300408AD1 /* HomePageCell.swift in Sources */,
