@@ -44,20 +44,26 @@ class HomePageCell: UITableViewCell {
         titleLabel.text = diary.title
         nicknameLabel.text = "개굴개굴개구리" // 임시
         moodLabel.text = diary.emotion
-        timeLabel.text = "14시 30분"
+        timeLabel.text = "14시 30분" // 임시
         configureUI()
     }
     
     private func configureUI() {
+        self.selectionStyle = .none
         configureContentView()
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
-        nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
-        timeLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
+        configureLabelFont()
+        
     }
     
     private func configureContentView() {
         contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.customYellow.cgColor
+    }
+    
+    private func configureLabelFont() {
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
+        nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
+        timeLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
     }
 }
