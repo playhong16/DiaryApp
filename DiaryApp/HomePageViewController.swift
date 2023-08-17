@@ -16,7 +16,6 @@ final class HomePageViewController: UIViewController {
     // MARK: - Interface Builder Outlet
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var floatingActionButton: UIButton!
@@ -51,11 +50,11 @@ final class HomePageViewController: UIViewController {
     
     func configureCategoryButton() {
         categoryButton.menu = ageGroupMenu
-        categoryButton.titleLabel?.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 16)
+        categoryButton.titleLabel?.font = UIFont(name: "NanumSquareRoundL", size: 12)
         categoryButton.backgroundColor = .white
         categoryButton.layer.borderWidth = 1
         categoryButton.layer.borderColor = UIColor.customYellow.cgColor
-        categoryButton.layer.cornerRadius = 10
+        categoryButton.layer.cornerRadius = 8
     }
     
     private func configureFloatingActionButton() {
@@ -66,10 +65,8 @@ final class HomePageViewController: UIViewController {
     }
     
     private func configureLabel() {
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 30)
+        titleLabel.font = UIFont(name: "NanumSquareRoundB", size: 26)
         titleLabel.textColor = .black
-        dateLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 16)
-        dateLabel.textColor = .customYellow
     }
     
     private func createAgeGroupMenu() -> [UIAction] {

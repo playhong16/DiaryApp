@@ -50,13 +50,13 @@ class HomePageCell: UITableViewCell {
     
     private func configureUI() {
         configureContentView()
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 22)
-        nicknameLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 18)
-        timeLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 18)
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
+        nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
+        timeLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
     }
     
     private func configureContentView() {
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.customYellow.cgColor
     }
