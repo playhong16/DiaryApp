@@ -20,6 +20,8 @@
 		332144702A89C752008E1AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3321446E2A89C752008E1AFF /* LaunchScreen.storyboard */; };
 		33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33233AEE2A8D39F200418F37 /* ProfileManager.swift */; };
 		33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8DA5D2A8A211600D44B2C /* DataManager.swift */; };
+		6ACB5C252A8E57C7007E13AD /* AddPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB5C242A8E57C7007E13AD /* AddPageViewController.swift */; };
+		6ACB5C272A8E57DC007E13AD /* AddPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACB5C262A8E57DC007E13AD /* AddPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		332144712A89C752008E1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33233AEE2A8D39F200418F37 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		33B8DA5D2A8A211600D44B2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6ACB5C242A8E57C7007E13AD /* AddPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPageViewController.swift; sourceTree = "<group>"; };
+		6ACB5C262A8E57DC007E13AD /* AddPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		332144622A89C751008E1AFF /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				6ACB5C232A8E5762007E13AD /* AddPage */,
 				332144632A89C751008E1AFF /* AppDelegate.swift */,
 				332144652A89C751008E1AFF /* SceneDelegate.swift */,
 				332144672A89C751008E1AFF /* ViewController.swift */,
@@ -102,6 +107,15 @@
 				33233AEE2A8D39F200418F37 /* ProfileManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		6ACB5C232A8E5762007E13AD /* AddPage */ = {
+			isa = PBXGroup;
+			children = (
+				6ACB5C242A8E57C7007E13AD /* AddPageViewController.swift */,
+				6ACB5C262A8E57DC007E13AD /* AddPage.storyboard */,
+			);
+			path = AddPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,7 @@
 				332144702A89C752008E1AFF /* LaunchScreen.storyboard in Resources */,
 				3321446D2A89C752008E1AFF /* Assets.xcassets in Resources */,
 				3321446B2A89C751008E1AFF /* Main.storyboard in Resources */,
+				6ACB5C272A8E57DC007E13AD /* AddPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +200,7 @@
 				330226C02A89FBB20070514E /* Job.swift in Sources */,
 				33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */,
 				330226BE2A89FA290070514E /* AgeGroup.swift in Sources */,
+				6ACB5C252A8E57C7007E13AD /* AddPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
