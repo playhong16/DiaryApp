@@ -34,6 +34,8 @@
 		33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33233AEE2A8D39F200418F37 /* ProfileManager.swift */; };
 		33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8DA5D2A8A211600D44B2C /* DataManager.swift */; };
 		33C136D12A8EAD08002796A1 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D02A8EAD08002796A1 /* MyPageCell.swift */; };
+		33C136D32A8EAF1D002796A1 /* MyDetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */; };
+		33C136D52A8EAF2F002796A1 /* MyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */; };
 		C33865AE2A8C6FCF0018A0DA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */; };
 		C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		33233AEE2A8D39F200418F37 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		33B8DA5D2A8A211600D44B2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		33C136D02A8EAD08002796A1 /* MyPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
+		33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDetailPage.storyboard; sourceTree = "<group>"; };
+		33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewController.swift; sourceTree = "<group>"; };
 		C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +124,7 @@
 				330620762A8EA85500B31541 /* MyPageViewController.swift */,
 				330620782A8EA89000B31541 /* MyPageViewModel.swift */,
 				33C136D02A8EAD08002796A1 /* MyPageCell.swift */,
+				33C136D62A8EAF33002796A1 /* MyDetailPage */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -168,6 +173,15 @@
 				33233AEE2A8D39F200418F37 /* ProfileManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		33C136D62A8EAF33002796A1 /* MyDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */,
+				33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */,
+			);
+			path = MyDetailPage;
 			sourceTree = "<group>";
 		};
 		C33865AC2A8C6F9D0018A0DA /* DetailPage */ = {
@@ -263,6 +277,7 @@
 				054D40DE2A8D27F400408AD1 /* NanumSquareRoundL.ttf in Resources */,
 				332144702A89C752008E1AFF /* LaunchScreen.storyboard in Resources */,
 				3321446D2A89C752008E1AFF /* Assets.xcassets in Resources */,
+				33C136D32A8EAF1D002796A1 /* MyDetailPage.storyboard in Resources */,
 				3321446B2A89C751008E1AFF /* Main.storyboard in Resources */,
 				C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */,
 			);
@@ -276,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33865AE2A8C6FCF0018A0DA /* DetailPageViewController.swift in Sources */,
+				33C136D52A8EAF2F002796A1 /* MyDetailViewController.swift in Sources */,
 				332144682A89C751008E1AFF /* ViewController.swift in Sources */,
 				054D40C42A8CC45300408AD1 /* UIColor.swift in Sources */,
 				33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */,

@@ -99,6 +99,20 @@ extension MyPageViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let diary = viewModel.diaryList.value[indexPath.item]
+        let sb = UIStoryboard(name: "MyDetailPage", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: MyDetailViewController.identifier) as?
+                MyDetailViewController else { return }
+        vc.diaryData = diary
+        vc.reloading = {
+            self.viewModel.selectDate(date: self.pickedDate)
+        }
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .flipHorizontal
+        present(vc, animated: true)
+    }
 }
 
 extension MyPageViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {

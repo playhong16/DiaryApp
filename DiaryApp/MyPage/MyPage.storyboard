@@ -165,7 +165,7 @@
         <!--마이페이지-->
         <scene sceneID="3gc-d0-2EO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aBe-o7-NPo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyPage" automaticallyAdjustsScrollViewInsets="NO" id="aBe-o7-NPo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="마이페이지" image="pencil" catalog="system" id="eME-j0-V2G"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
