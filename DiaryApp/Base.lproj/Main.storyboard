@@ -16,22 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egi-0a-86n">
-                                <rect key="frame" x="159" y="396" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="Ffn-oH-W0f" kind="show" id="sNk-bh-nN1"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="egi-0a-86n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bYb-ll-LfT"/>
-                            <constraint firstItem="egi-0a-86n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="337" id="k9F-F0-Ab8"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="G3z-CM-EbC"/>
                     <navigationItem key="navigationItem" id="aq7-8T-JoO"/>
@@ -39,17 +25,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="125"/>
-        </scene>
-        <!--DetailPageController-->
-        <scene sceneID="saZ-sH-oGs">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DetailPageStoryboard" referencedIdentifier="DetailPageController" id="Ffn-oH-W0f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wqd-tr-ffV"/>
-                    <navigationItem key="navigationItem" id="v4t-bg-awc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f9l-8Y-VPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1079" y="125"/>
         </scene>
     </scenes>
     <resources>

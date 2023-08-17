@@ -122,16 +122,12 @@
 		332144622A89C751008E1AFF /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
-				054D40C22A8CC44000408AD1 /* Extension */,
-				054D40BE2A8C943300408AD1 /* HomePageCell.swift */,
-				054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */,
-				054D40B82A8C586A00408AD1 /* HomePageViewController.swift */,
 				332144632A89C751008E1AFF /* AppDelegate.swift */,
 				332144652A89C751008E1AFF /* SceneDelegate.swift */,
 				332144672A89C751008E1AFF /* ViewController.swift */,
-				054D40B62A8C584F00408AD1 /* HomePage.storyboard */,
-				054D40BA2A8C58B400408AD1 /* TabBar.storyboard */,
 				332144692A89C751008E1AFF /* Main.storyboard */,
+				054D40C22A8CC44000408AD1 /* Extension */,
+				C3DBE51E2A8DEF5600BA2527 /* HomePage */,
 				C33865AC2A8C6F9D0018A0DA /* DetailPage */,
 				33B8DA5F2A8A211F00D44B2C /* Manager */,
 				330226BA2A89F3F90070514E /* Models */,
@@ -159,6 +155,18 @@
 				C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */,
 			);
 			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		C3DBE51E2A8DEF5600BA2527 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				054D40BE2A8C943300408AD1 /* HomePageCell.swift */,
+				054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */,
+				054D40B82A8C586A00408AD1 /* HomePageViewController.swift */,
+				054D40B62A8C584F00408AD1 /* HomePage.storyboard */,
+				054D40BA2A8C58B400408AD1 /* TabBar.storyboard */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

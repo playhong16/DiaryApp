@@ -46,6 +46,7 @@ final class HomePageViewController: UIViewController {
     
     private func configureTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     func configureCategoryButton() {
@@ -92,7 +93,7 @@ final class HomePageViewController: UIViewController {
 
 // MARK: - Extension
 
-extension HomePageViewController: UITableViewDataSource {
+extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataManager.getDiary().count
     }
@@ -101,8 +102,28 @@ extension HomePageViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomePageCell.identifier, for: indexPath) as? HomePageCell else {
             return UITableViewCell()
         }
-        let diary = dataManager.getDiary()[indexPath.row]
+        var diary = dataManager.getDiary()[indexPath.row]
         cell.setupData(diary)
         return cell
     }
+    
+    // 테이블 뷰 셀 선택 처리
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 선택된 셀의 항목 출력
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath.row)
+        
+    }
+    
+    // 셀 선택 시 디테일 페이지 이동
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let vc = segue.destination as? DetailPageViewController
+            
+            if let index = sender as? Int {
+                vc?.numOfPage = index
+            }
+            
+        }
+    }
+   
 }
