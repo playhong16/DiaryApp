@@ -11,18 +11,21 @@ class DetailPageViewController: UIViewController {
 
 //        func instantiateViewController(withIdentifier: "DetailPageController") -> UIViewController
     
-    // 뒤로가기
-    @IBAction func BackBTN(_ sender: UIBarButtonItem) {
-    }
+    @IBOutlet weak var TextView: UITextView!
     
+    // 뒤로가기
+//    @IBAction func BackBTN(_ sender: UIBarButtonItem) {
+//    }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
+ 
     }
-    
-  
+    // 텍스트뷰 설정
+    func textViewSetUp(){
+        // 수정 안되게 
+        
+    }
     
 
 }
