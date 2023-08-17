@@ -107,7 +107,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z71-Rh-4Nk">
-                                        <rect key="frame" x="306" y="27" width="83" height="35"/>
+                                        <rect key="frame" x="307" y="35" width="68" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -140,6 +140,7 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryButton" destination="z71-Rh-4Nk" id="HAY-Q3-2p3"/>
                         <outlet property="dateLabel" destination="yaz-fM-Yo5" id="vo5-eh-2j4"/>
                         <outlet property="floatingActionButton" destination="eEu-6Y-q3l" id="Msi-sV-uff"/>
                         <outlet property="tableView" destination="isd-rR-PZ4" id="lqf-NH-SgV"/>

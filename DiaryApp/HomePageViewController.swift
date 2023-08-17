@@ -18,6 +18,7 @@ final class HomePageViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var floatingActionButton: UIButton!
     
@@ -34,6 +35,7 @@ final class HomePageViewController: UIViewController {
     private func configureUI() {
         configureTableView()
         configureFloatingActionButton()
+        configureCategoryButton()
     }
     
     private func configureTableView() {
@@ -45,6 +47,14 @@ final class HomePageViewController: UIViewController {
         titleLabel.textColor = .black
         tableView.dataSource = self
         tableView.backgroundColor = .clear
+    }
+    
+    func configureCategoryButton() {
+        categoryButton.titleLabel?.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 16)
+        categoryButton.backgroundColor = .white
+        categoryButton.layer.borderWidth = 1
+        categoryButton.layer.borderColor = UIColor.customYellow.cgColor
+        categoryButton.layer.cornerRadius = 10
     }
     
     private func configureFloatingActionButton() {
