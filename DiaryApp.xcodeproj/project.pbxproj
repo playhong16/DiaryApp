@@ -36,6 +36,7 @@
 		33C136D12A8EAD08002796A1 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D02A8EAD08002796A1 /* MyPageCell.swift */; };
 		33C136D32A8EAF1D002796A1 /* MyDetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */; };
 		33C136D52A8EAF2F002796A1 /* MyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */; };
+		33C136D82A8EB318002796A1 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D72A8EB318002796A1 /* KeyboardManager.swift */; };
 		C33865AE2A8C6FCF0018A0DA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */; };
 		C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		33C136D02A8EAD08002796A1 /* MyPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
 		33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDetailPage.storyboard; sourceTree = "<group>"; };
 		33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewController.swift; sourceTree = "<group>"; };
+		33C136D72A8EB318002796A1 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			children = (
 				33B8DA5D2A8A211600D44B2C /* DataManager.swift */,
 				33233AEE2A8D39F200418F37 /* ProfileManager.swift */,
+				33C136D72A8EB318002796A1 /* KeyboardManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				33C136D12A8EAD08002796A1 /* MyPageCell.swift in Sources */,
 				330620772A8EA85500B31541 /* MyPageViewController.swift in Sources */,
 				332144642A89C751008E1AFF /* AppDelegate.swift in Sources */,
+				33C136D82A8EB318002796A1 /* KeyboardManager.swift in Sources */,
 				330226C22A8A05300070514E /* Emotion.swift in Sources */,
 				332144662A89C751008E1AFF /* SceneDelegate.swift in Sources */,
 				330226B92A89F3F60070514E /* Diary.swift in Sources */,
