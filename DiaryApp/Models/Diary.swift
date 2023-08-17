@@ -8,7 +8,7 @@
 import UIKit
 
 struct Diary {
-    let id: UUID = UUID()
+    var id: UUID = UUID()
     var title: String
     var date: Date
     var emotion : String
