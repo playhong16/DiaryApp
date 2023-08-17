@@ -21,6 +21,10 @@
 		330226BE2A89FA290070514E /* AgeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BD2A89FA290070514E /* AgeGroup.swift */; };
 		330226C02A89FBB20070514E /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BF2A89FBB20070514E /* Job.swift */; };
 		330226C22A8A05300070514E /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226C12A8A05300070514E /* Emotion.swift */; };
+		330620742A8EA82D00B31541 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330620732A8EA82D00B31541 /* MyPage.storyboard */; };
+		330620772A8EA85500B31541 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330620762A8EA85500B31541 /* MyPageViewController.swift */; };
+		330620792A8EA89000B31541 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330620782A8EA89000B31541 /* MyPageViewModel.swift */; };
+		3306207C2A8EA8BF00B31541 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3306207B2A8EA8BF00B31541 /* FSCalendar */; };
 		332144642A89C751008E1AFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332144632A89C751008E1AFF /* AppDelegate.swift */; };
 		332144662A89C751008E1AFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332144652A89C751008E1AFF /* SceneDelegate.swift */; };
 		332144682A89C751008E1AFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332144672A89C751008E1AFF /* ViewController.swift */; };
@@ -29,6 +33,7 @@
 		332144702A89C752008E1AFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3321446E2A89C752008E1AFF /* LaunchScreen.storyboard */; };
 		33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33233AEE2A8D39F200418F37 /* ProfileManager.swift */; };
 		33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8DA5D2A8A211600D44B2C /* DataManager.swift */; };
+		33C136D12A8EAD08002796A1 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D02A8EAD08002796A1 /* MyPageCell.swift */; };
 		C33865AE2A8C6FCF0018A0DA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */; };
 		C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -48,6 +53,9 @@
 		330226BD2A89FA290070514E /* AgeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroup.swift; sourceTree = "<group>"; };
 		330226BF2A89FBB20070514E /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		330226C12A8A05300070514E /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		330620732A8EA82D00B31541 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		330620762A8EA85500B31541 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		330620782A8EA89000B31541 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		332144602A89C751008E1AFF /* DiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		332144632A89C751008E1AFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		332144652A89C751008E1AFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,7 @@
 		332144712A89C752008E1AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33233AEE2A8D39F200418F37 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		33B8DA5D2A8A211600D44B2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		33C136D02A8EAD08002796A1 /* MyPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
 		C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3306207C2A8EA8BF00B31541 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +113,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		330620752A8EA83200B31541 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				330620732A8EA82D00B31541 /* MyPage.storyboard */,
+				330620762A8EA85500B31541 /* MyPageViewController.swift */,
+				330620782A8EA89000B31541 /* MyPageViewModel.swift */,
+				33C136D02A8EAD08002796A1 /* MyPageCell.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		332144572A89C751008E1AFF = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +149,7 @@
 				332144692A89C751008E1AFF /* Main.storyboard */,
 				054D40C22A8CC44000408AD1 /* Extension */,
 				C3DBE51E2A8DEF5600BA2527 /* HomePage */,
+				330620752A8EA83200B31541 /* MyPage */,
 				C33865AC2A8C6F9D0018A0DA /* DetailPage */,
 				33B8DA5F2A8A211F00D44B2C /* Manager */,
 				330226BA2A89F3F90070514E /* Models */,
@@ -185,6 +207,9 @@
 			dependencies = (
 			);
 			name = DiaryApp;
+			packageProductDependencies = (
+				3306207B2A8EA8BF00B31541 /* FSCalendar */,
+			);
 			productName = DiaryApp;
 			productReference = 332144602A89C751008E1AFF /* DiaryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -213,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 332144572A89C751008E1AFF;
+			packageReferences = (
+				3306207A2A8EA8BF00B31541 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 332144612A89C751008E1AFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				054D40BB2A8C58B400408AD1 /* TabBar.storyboard in Resources */,
+				330620742A8EA82D00B31541 /* MyPage.storyboard in Resources */,
 				054D40E02A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */,
 				054D40DC2A8D278500408AD1 /* NanumSquareRoundB.ttf in Resources */,
 				054D40B72A8C584F00408AD1 /* HomePage.storyboard in Resources */,
@@ -252,7 +281,10 @@
 				33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
 				054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */,
+				330620792A8EA89000B31541 /* MyPageViewModel.swift in Sources */,
 				054D40BF2A8C943300408AD1 /* HomePageCell.swift in Sources */,
+				33C136D12A8EAD08002796A1 /* MyPageCell.swift in Sources */,
+				330620772A8EA85500B31541 /* MyPageViewController.swift in Sources */,
 				332144642A89C751008E1AFF /* AppDelegate.swift in Sources */,
 				330226C22A8A05300070514E /* Emotion.swift in Sources */,
 				332144662A89C751008E1AFF /* SceneDelegate.swift in Sources */,
@@ -486,6 +518,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3306207A2A8EA8BF00B31541 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3306207B2A8EA8BF00B31541 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3306207A2A8EA8BF00B31541 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 332144582A89C751008E1AFF /* Project object */;
 }
