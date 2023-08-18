@@ -52,13 +52,12 @@ class HomePageCell: UITableViewCell {
         self.selectionStyle = .none
         configureContentView()
         configureLabelFont()
-        
     }
     
     private func configureContentView() {
         contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.customYellow.cgColor
+        contentView.layer.borderColor = UIColor.customDarkBeige.cgColor
     }
     
     private func configureLabelFont() {

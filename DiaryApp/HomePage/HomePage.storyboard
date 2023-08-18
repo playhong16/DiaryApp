@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Page View Controller-->
+        <!--TODAY-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomePageViewController" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,37 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ng-dd-suN">
-                                <rect key="frame" x="0.0" y="59" width="393" height="80"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-bt-PDP">
-                                        <rect key="frame" x="18" y="8" width="102" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z71-Rh-4Nk">
-                                        <rect key="frame" x="315" y="45" width="68" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="연령대별">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ng-dd-suN">
+                                <rect key="frame" x="0.0" y="155" width="393" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="5E5-ay-IOV"/>
-                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="isd-rR-PZ4">
-                                <rect key="frame" x="0.0" y="139" width="393" height="630"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="617"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="KhW-Fo-oBX">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" id="t7y-xI-Ti6">
+                                            <rect key="frame" x="313" y="4" width="64" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="연령대별">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomePageCell" id="HAJ-S0-rvI" customClass="HomePageCell" customModule="DiaryApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="130"/>
+                                        <rect key="frame" x="0.0" y="94" width="393" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HAJ-S0-rvI" id="qvk-AC-qqL">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
@@ -102,7 +98,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-6Y-q3l">
-                                <rect key="frame" x="293" y="679" width="70" height="70"/>
+                                <rect key="frame" x="293" y="630" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="wCl-9b-uxz"/>
                                     <constraint firstAttribute="height" constant="70" id="y5v-vG-iGd"/>
@@ -113,6 +109,9 @@
                                 <state key="normal" image="plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GvH-8b-Cih" kind="show" identifier="toAddPageFrom" id="IgJ-rV-2Nm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -120,29 +119,25 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="isd-rR-PZ4" secondAttribute="trailing" id="ESC-Yr-6VT"/>
                             <constraint firstItem="isd-rR-PZ4" firstAttribute="bottom" secondItem="eEu-6Y-q3l" secondAttribute="bottom" constant="20" id="EbW-dZ-Onk"/>
-                            <constraint firstItem="isd-rR-PZ4" firstAttribute="top" secondItem="3Ng-dd-suN" secondAttribute="bottom" id="NOf-EZ-GpW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="isd-rR-PZ4" secondAttribute="bottom" id="TOr-e8-1UW"/>
-                            <constraint firstItem="3Ng-dd-suN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aru-YS-Cer"/>
-                            <constraint firstItem="3Ng-dd-suN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bPX-2P-tGM"/>
                             <constraint firstItem="isd-rR-PZ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="byX-tM-nS8"/>
-                            <constraint firstItem="3Ng-dd-suN" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cPS-Rh-2af"/>
+                            <constraint firstItem="isd-rR-PZ4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="igS-dF-Vnz"/>
                             <constraint firstItem="isd-rR-PZ4" firstAttribute="trailing" secondItem="eEu-6Y-q3l" secondAttribute="trailing" constant="30" id="rhE-yA-SLd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="owl-0b-pmc">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="TODAY" id="PUk-jK-QYS"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="categoryButton" destination="z71-Rh-4Nk" id="HAY-Q3-2p3"/>
+                        <outlet property="categoryButton" destination="t7y-xI-Ti6" id="t23-Uu-dPq"/>
                         <outlet property="floatingActionButton" destination="eEu-6Y-q3l" id="Msi-sV-uff"/>
                         <outlet property="tableView" destination="isd-rR-PZ4" id="lqf-NH-SgV"/>
-                        <outlet property="titleLabel" destination="e2a-bt-PDP" id="klY-UT-7Pz"/>
-                        <segue destination="AaG-ev-lly" kind="show" identifier="ShowDetail" id="Dzb-vK-GJd"/>
+                        <segue destination="AaG-ev-lly" kind="show" identifier="ShowDetail" id="gqF-qm-Whr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="-449"/>
+            <point key="canvasLocation" x="599" y="-449"/>
         </scene>
         <!--DetailPageController-->
         <scene sceneID="oba-dt-3t3">
@@ -152,16 +147,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOq-ED-oOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-449"/>
+            <point key="canvasLocation" x="1646" y="-538"/>
+        </scene>
+        <!--AddPage-->
+        <scene sceneID="0bI-T2-Jzt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddPage" id="GvH-8b-Cih" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="khn-9N-Tjn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCT-v4-90T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="-464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eLq-40-X2u">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qYE-PX-t3d" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qYE-PX-t3d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="list.bullet" catalog="system" id="Imf-e5-6DS"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ba6-Hg-CWk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ba6-Hg-CWk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,7 +181,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6F-ik-Zmf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="-455"/>
+            <point key="canvasLocation" x="-83" y="-449"/>
         </scene>
     </scenes>
     <resources>

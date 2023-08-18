@@ -15,5 +15,5 @@ struct Diary: Hashable {
     var content: String
     var hashTag: String?
     var image: UIImage?
-    var isLiked = false
+    var isLiked: Bool
 }

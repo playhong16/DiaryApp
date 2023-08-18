@@ -16,6 +16,7 @@
 		054D40DC2A8D278500408AD1 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D40DB2A8D278500408AD1 /* NanumSquareRoundB.ttf */; };
 		054D40DE2A8D27F400408AD1 /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D40DD2A8D27F300408AD1 /* NanumSquareRoundL.ttf */; };
 		054D40E02A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D40DF2A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf */; };
+		054D40E32A8F15C400408AD1 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40E22A8F15C400408AD1 /* test.swift */; };
 		330226B92A89F3F60070514E /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226B82A89F3F60070514E /* Diary.swift */; };
 		330226BC2A89F4160070514E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BB2A89F4160070514E /* Profile.swift */; };
 		330226BE2A89FA290070514E /* AgeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BD2A89FA290070514E /* AgeGroup.swift */; };
@@ -39,6 +40,13 @@
 		33C136D82A8EB318002796A1 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D72A8EB318002796A1 /* KeyboardManager.swift */; };
 		C33865AE2A8C6FCF0018A0DA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */; };
 		C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */; };
+		6ACB5C252A8E57C7007E13AD /* AddPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB5C242A8E57C7007E13AD /* AddPageViewController.swift */; };
+		6ACB5C272A8E57DC007E13AD /* AddPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACB5C262A8E57DC007E13AD /* AddPage.storyboard */; };
+		9B8BF7922A8C76E5005C230F /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */; };
+		9B8BF7942A8C77C3005C230F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */; };
+		9B8BF7982A8CBB20005C230F /* AgeGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */; };
+		9B8BF79A2A8CBC2D005C230F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */; };
+		9B8BF79C2A8CC836005C230F /* AgeGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +59,7 @@
 		054D40DB2A8D278500408AD1 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		054D40DD2A8D27F300408AD1 /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		054D40DF2A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 딸에게 엄마가.ttf"; sourceTree = "<group>"; };
+		054D40E22A8F15C400408AD1 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		330226B82A89F3F60070514E /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		330226BB2A89F4160070514E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		330226BD2A89FA290070514E /* AgeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroup.swift; sourceTree = "<group>"; };
@@ -75,6 +84,13 @@
 		33C136D72A8EB318002796A1 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
+		6ACB5C242A8E57C7007E13AD /* AddPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPageViewController.swift; sourceTree = "<group>"; };
+		6ACB5C262A8E57DC007E13AD /* AddPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPage.storyboard; sourceTree = "<group>"; };
+		9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
+		9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewController.swift; sourceTree = "<group>"; };
+		9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +121,16 @@
 				054D40DB2A8D278500408AD1 /* NanumSquareRoundB.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		054D40E12A8F104A00408AD1 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				054D40BE2A8C943300408AD1 /* HomePageCell.swift */,
+				054D40B62A8C584F00408AD1 /* HomePage.storyboard */,
+				054D40B82A8C586A00408AD1 /* HomePageViewController.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		330226BA2A89F3F90070514E /* Models */ = {
@@ -150,9 +176,16 @@
 		332144622A89C751008E1AFF /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B8BF79D2A8CE219005C230F /* EditProfile */,
 				332144632A89C751008E1AFF /* AppDelegate.swift */,
 				332144652A89C751008E1AFF /* SceneDelegate.swift */,
+				054D40BC2A8C59F000408AD1 /* TabBarViewController.swift */,
+				054D40BA2A8C58B400408AD1 /* TabBar.storyboard */,
+				054D40C22A8CC44000408AD1 /* Extension */,
+				054D40E12A8F104A00408AD1 /* HomePage */,
+				6ACB5C232A8E5762007E13AD /* AddPage */,
 				332144672A89C751008E1AFF /* ViewController.swift */,
+				9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */,
 				332144692A89C751008E1AFF /* Main.storyboard */,
 				054D40C22A8CC44000408AD1 /* Extension */,
 				C3DBE51E2A8DEF5600BA2527 /* HomePage */,
@@ -206,6 +239,25 @@
 				054D40BA2A8C58B400408AD1 /* TabBar.storyboard */,
 			);
 			path = HomePage;
+		};
+		6ACB5C232A8E5762007E13AD /* AddPage */ = {
+			isa = PBXGroup;
+			children = (
+				6ACB5C242A8E57C7007E13AD /* AddPageViewController.swift */,
+				6ACB5C262A8E57DC007E13AD /* AddPage.storyboard */,
+				054D40E22A8F15C400408AD1 /* test.swift */,
+			);
+			path = AddPage;
+		};
+		9B8BF79D2A8CE219005C230F /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */,
+				9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */,
+				9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */,
+				9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */,
+			);
+			path = EditProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +335,8 @@
 				33C136D32A8EAF1D002796A1 /* MyDetailPage.storyboard in Resources */,
 				3321446B2A89C751008E1AFF /* Main.storyboard in Resources */,
 				C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */,
+				6ACB5C272A8E57DC007E13AD /* AddPage.storyboard in Resources */,
+				9B8BF7922A8C76E5005C230F /* ProfilePage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,15 +358,22 @@
 				054D40BF2A8C943300408AD1 /* HomePageCell.swift in Sources */,
 				33C136D12A8EAD08002796A1 /* MyPageCell.swift in Sources */,
 				330620772A8EA85500B31541 /* MyPageViewController.swift in Sources */,
+				054D40E32A8F15C400408AD1 /* test.swift in Sources */,
+				054D40BF2A8C943300408AD1 /* HomePageCell.swift in Sources */,
+				9B8BF7942A8C77C3005C230F /* ProfileViewController.swift in Sources */,
 				332144642A89C751008E1AFF /* AppDelegate.swift in Sources */,
 				33C136D82A8EB318002796A1 /* KeyboardManager.swift in Sources */,
 				330226C22A8A05300070514E /* Emotion.swift in Sources */,
 				332144662A89C751008E1AFF /* SceneDelegate.swift in Sources */,
+				9B8BF79A2A8CBC2D005C230F /* EditProfileViewController.swift in Sources */,
+				9B8BF7982A8CBB20005C230F /* AgeGroupTableViewController.swift in Sources */,
+				9B8BF79C2A8CC836005C230F /* AgeGroupTableViewCell.swift in Sources */,
 				330226B92A89F3F60070514E /* Diary.swift in Sources */,
 				330226C02A89FBB20070514E /* Job.swift in Sources */,
 				33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */,
 				054D40B92A8C586A00408AD1 /* HomePageViewController.swift in Sources */,
 				330226BE2A89FA290070514E /* AgeGroup.swift in Sources */,
+				6ACB5C252A8E57C7007E13AD /* AddPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
