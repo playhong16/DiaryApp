@@ -11,7 +11,7 @@ struct Diary {
     let id: UUID = UUID()
     var title: String
     var date: Date
-    var emotion : String
+    var emotion : Emotion
     var content: String
     var hashTag: String?
     var image: UIImage?
