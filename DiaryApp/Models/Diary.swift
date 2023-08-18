@@ -8,12 +8,12 @@
 import UIKit
 
 struct Diary {
-    let id: UUID = UUID()
+    var id: UUID = UUID()
     var title: String
     var date: Date
     var emotion : Emotion
     var content: String
     var hashTag: String?
     var image: UIImage?
-    var isLiked = false
+    var isLiked: Bool
 }

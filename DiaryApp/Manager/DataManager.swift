@@ -12,7 +12,7 @@ final class DataManager {
     private init() { }
     
     private var DiaryList: [Diary] = [
-        Diary(title: "swift 공부하자", date: Date(), emotion: Emotion.happy, content: "힘내자 화이팅!!!!")
+        Diary(title: "swift 공부하자", date: Date(), emotion: Emotion.happy, content: "힘내자 화이팅!!!!", isLiked: false)
     ]
 
     func saveDiary(data: Diary) {
