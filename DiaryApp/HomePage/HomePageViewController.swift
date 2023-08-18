@@ -15,7 +15,6 @@ final class HomePageViewController: UIViewController {
     
     // MARK: - Interface Builder Outlet
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var floatingActionButton: UIButton!
@@ -31,8 +30,8 @@ final class HomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .customBeige
         configureUI()
-        view.backgroundColor = .creamYellow
     }
     
     // MARK: - Configure
@@ -41,7 +40,6 @@ final class HomePageViewController: UIViewController {
         configureTableView()
         configureFloatingActionButton()
         configureCategoryButton()
-        configureLabel()
     }
     
     private func configureTableView() {
@@ -54,21 +52,17 @@ final class HomePageViewController: UIViewController {
         categoryButton.titleLabel?.font = UIFont(name: "NanumSquareRoundL", size: 12)
         categoryButton.backgroundColor = .white
         categoryButton.layer.borderWidth = 1
-        categoryButton.layer.borderColor = UIColor.customYellow.cgColor
+        categoryButton.layer.borderColor = UIColor.customDarkBeige.cgColor
         categoryButton.layer.cornerRadius = 8
     }
     
     private func configureFloatingActionButton() {
-        floatingActionButton.backgroundColor = .customYellow
+        floatingActionButton.backgroundColor = .customDarkBeige
         floatingActionButton.layer.cornerRadius = 0.5 * floatingActionButton.bounds.size.width
         floatingActionButton.layer.borderWidth = 1
-        floatingActionButton.layer.borderColor = UIColor.creamYellow.cgColor
+        floatingActionButton.layer.borderColor = UIColor.customBeige.cgColor
     }
     
-    private func configureLabel() {
-        titleLabel.font = UIFont(name: "NanumSquareRoundB", size: 26)
-        titleLabel.textColor = .black
-    }
     
     private func createAgeGroupMenu() -> [UIAction] {
         let allAges = UIAction(title: "전체") { action in
