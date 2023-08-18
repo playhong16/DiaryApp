@@ -13,12 +13,13 @@
 		054D40DC2A8D278500408AD1 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D40DB2A8D278500408AD1 /* NanumSquareRoundB.ttf */; };
 		054D40DE2A8D27F400408AD1 /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D40DD2A8D27F300408AD1 /* NanumSquareRoundL.ttf */; };
 		054D40E02A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 054D40DF2A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf */; };
-		054D40E62A8F8E5600408AD1 /* AddPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40E52A8F8E5600408AD1 /* AddPageViewController.swift */; };
 		054D40F52A8F8F5E00408AD1 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054D40F42A8F8F5E00408AD1 /* HomePage.storyboard */; };
 		054D40F72A8F8F6700408AD1 /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40F62A8F8F6600408AD1 /* HomePageCell.swift */; };
 		054D40F92A8F8F6A00408AD1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40F82A8F8F6A00408AD1 /* HomePageViewController.swift */; };
 		054D40FB2A8F8F7000408AD1 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054D40FA2A8F8F6F00408AD1 /* TabBar.storyboard */; };
 		054D40FD2A8F8F7300408AD1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D40FC2A8F8F7300408AD1 /* TabBarViewController.swift */; };
+		054D41002A8F902200408AD1 /* AddPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054D40FF2A8F902200408AD1 /* AddPage.storyboard */; };
+		054D41022A8F902600408AD1 /* AddPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D41012A8F902600408AD1 /* AddPageViewController.swift */; };
 		330226B92A89F3F60070514E /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226B82A89F3F60070514E /* Diary.swift */; };
 		330226BC2A89F4160070514E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BB2A89F4160070514E /* Profile.swift */; };
 		330226BE2A89FA290070514E /* AgeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330226BD2A89FA290070514E /* AgeGroup.swift */; };
@@ -56,13 +57,13 @@
 		054D40DB2A8D278500408AD1 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		054D40DD2A8D27F300408AD1 /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		054D40DF2A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 딸에게 엄마가.ttf"; sourceTree = "<group>"; };
-		054D40E42A8F8E5200408AD1 /* AddPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AddPage.storyboard; path = AddPage/AddPage.storyboard; sourceTree = SOURCE_ROOT; };
-		054D40E52A8F8E5600408AD1 /* AddPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddPageViewController.swift; path = AddPage/AddPageViewController.swift; sourceTree = SOURCE_ROOT; };
 		054D40F42A8F8F5E00408AD1 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		054D40F62A8F8F6600408AD1 /* HomePageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
 		054D40F82A8F8F6A00408AD1 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		054D40FA2A8F8F6F00408AD1 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		054D40FC2A8F8F7300408AD1 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		054D40FF2A8F902200408AD1 /* AddPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddPage.storyboard; sourceTree = "<group>"; };
+		054D41012A8F902600408AD1 /* AddPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPageViewController.swift; sourceTree = "<group>"; };
 		330226B82A89F3F60070514E /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		330226BB2A89F4160070514E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		330226BD2A89FA290070514E /* AgeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroup.swift; sourceTree = "<group>"; };
@@ -124,16 +125,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		054D40EB2A8F8E9C00408AD1 /* AddPage */ = {
-			isa = PBXGroup;
-			children = (
-				054D40E52A8F8E5600408AD1 /* AddPageViewController.swift */,
-				054D40E42A8F8E5200408AD1 /* AddPage.storyboard */,
-			);
-			name = AddPage;
-			path = ../AddPage;
-			sourceTree = "<group>";
-		};
 		054D40F32A8F8F4400408AD1 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +135,15 @@
 				054D40FC2A8F8F7300408AD1 /* TabBarViewController.swift */,
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		054D40FE2A8F901B00408AD1 /* AddPage */ = {
+			isa = PBXGroup;
+			children = (
+				054D41012A8F902600408AD1 /* AddPageViewController.swift */,
+				054D40FF2A8F902200408AD1 /* AddPage.storyboard */,
+			);
+			path = AddPage;
 			sourceTree = "<group>";
 		};
 		330226BA2A89F3F90070514E /* Models */ = {
@@ -189,8 +189,8 @@
 		332144622A89C751008E1AFF /* DiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				054D40FE2A8F901B00408AD1 /* AddPage */,
 				054D40F32A8F8F4400408AD1 /* HomePage */,
-				054D40EB2A8F8E9C00408AD1 /* AddPage */,
 				9B8BF79D2A8CE219005C230F /* EditProfile */,
 				332144632A89C751008E1AFF /* AppDelegate.swift */,
 				332144652A89C751008E1AFF /* SceneDelegate.swift */,
@@ -316,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				054D40BB2A8C58B400408AD1 /* TabBar.storyboard in Resources */,
+				054D41002A8F902200408AD1 /* AddPage.storyboard in Resources */,
 				330620742A8EA82D00B31541 /* MyPage.storyboard in Resources */,
 				054D40E02A8D300100408AD1 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */,
 				054D40DC2A8D278500408AD1 /* NanumSquareRoundB.ttf in Resources */,
@@ -342,10 +343,10 @@
 				33C136D52A8EAF2F002796A1 /* MyDetailViewController.swift in Sources */,
 				332144682A89C751008E1AFF /* ViewController.swift in Sources */,
 				054D40F72A8F8F6700408AD1 /* HomePageCell.swift in Sources */,
-				054D40E62A8F8E5600408AD1 /* AddPageViewController.swift in Sources */,
 				054D40C42A8CC45300408AD1 /* UIColor.swift in Sources */,
 				33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
+				054D41022A8F902600408AD1 /* AddPageViewController.swift in Sources */,
 				054D40BD2A8C59F000408AD1 /* TabBarViewController.swift in Sources */,
 				330620792A8EA89000B31541 /* MyPageViewModel.swift in Sources */,
 				054D40FD2A8F8F7300408AD1 /* TabBarViewController.swift in Sources */,
