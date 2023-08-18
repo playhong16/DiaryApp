@@ -24,6 +24,7 @@ class AddPageViewController: UIViewController, UITextFieldDelegate {
         setUp()
         
         // 텍스트 필드의 델리게이트 설정
+        self.title = "새로운 일기"
         memoTitle.delegate = self
         
         // 키보드 관련 노티피케이션 등록
