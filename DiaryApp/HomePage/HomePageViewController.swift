@@ -102,7 +102,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomePageCell.identifier, for: indexPath) as? HomePageCell else {
             return UITableViewCell()
         }
-        var diary = dataManager.getDiary()[indexPath.row]
+        let diary = dataManager.getDiary()[indexPath.row]
         cell.setupData(diary)
         return cell
     }

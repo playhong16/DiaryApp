@@ -54,7 +54,7 @@ class DetailPageViewController: UIViewController {
         let dateStr = formatter.string(from: diary.date)
         
         titleLabel.text = diary.title
-        moodLabel.text = diary.emotion
+        moodLabel.text = diary.emotion.title
         dateLabel.text = dateStr
         contentTextView.text = diary.content
         // nickname 가져와야함
@@ -70,6 +70,11 @@ class DetailPageViewController: UIViewController {
     
     
     // 뒤로가기
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
-
+    // 탭바 사라지게 하기
+    
+    
 }
