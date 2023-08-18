@@ -43,7 +43,7 @@ class HomePageCell: UITableViewCell {
     func setupData(_ diary: Diary) {
         titleLabel.text = diary.title
         nicknameLabel.text = "개굴개굴개구리" // 임시
-        moodLabel.text = diary.emotion
+        moodLabel.text = diary.emotion.title
         timeLabel.text = "14시 30분" // 임시
         configureUI()
     }
@@ -52,13 +52,12 @@ class HomePageCell: UITableViewCell {
         self.selectionStyle = .none
         configureContentView()
         configureLabelFont()
-        
     }
     
     private func configureContentView() {
         contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.customYellow.cgColor
+        contentView.layer.borderColor = UIColor.customDarkBeige.cgColor
     }
     
     private func configureLabelFont() {
