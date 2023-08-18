@@ -113,6 +113,9 @@
                                 <state key="normal" image="plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GvH-8b-Cih" kind="showDetail" identifier="toAddPageFromAddButton" id="hRD-er-4Mf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -142,6 +145,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="629.7709923664122" y="-455.63380281690144"/>
+        </scene>
+        <!--AddPage-->
+        <scene sceneID="0bI-T2-Jzt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddPage" id="GvH-8b-Cih" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCT-v4-90T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="-468"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eLq-40-X2u">

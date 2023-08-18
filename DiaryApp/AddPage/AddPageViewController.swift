@@ -13,15 +13,11 @@ class AddPageViewController: UIViewController {
     @IBOutlet weak var memoTitle: UITextField!
     @IBOutlet weak var memoContent: UITextView!
     
-    var selectedEmotion: String = ""
-    
-    
+    var selectedEmotion: Emotion = Emotion.nomal
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUp()
-        
     }
     
     func setUp (){
@@ -51,7 +47,7 @@ class AddPageViewController: UIViewController {
         let emotionMenu = UIMenu(title: "감정 선택", options: .displayInline, children: Emotion.allCases.map { emotion in
             UIAction(title: emotion.title, handler: { [weak self] _ in
                 // 감정 선택 처리
-                self?.selectedEmotion = emotion.title
+                self?.selectedEmotion = emotion
                 sender.setTitle(emotion.title, for: .normal)
                 self?.view.layoutIfNeeded() // UI 업데이트 강제
             })
@@ -82,11 +78,5 @@ class AddPageViewController: UIViewController {
         DataManager.shared.saveDiary(data: newDiary)
         
         navigationController?.popViewController(animated: true)
-        
     }
-    
-    
-    
-    
-
 }
