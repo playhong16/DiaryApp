@@ -15,7 +15,6 @@ final class HomePageViewController: UIViewController {
     
     // MARK: - Interface Builder Outlet
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var floatingActionButton: UIButton!
@@ -41,7 +40,6 @@ final class HomePageViewController: UIViewController {
         configureTableView()
         configureFloatingActionButton()
         configureCategoryButton()
-        configureLabel()
     }
     
     private func configureTableView() {
@@ -64,10 +62,6 @@ final class HomePageViewController: UIViewController {
         floatingActionButton.layer.borderColor = UIColor.customBeige.cgColor
     }
     
-    private func configureLabel() {
-        titleLabel.font = UIFont(name: "NanumSquareRoundB", size: 26)
-        titleLabel.textColor = .black
-    }
     
     private func createAgeGroupMenu() -> [UIAction] {
         let allAges = UIAction(title: "전체") { action in
