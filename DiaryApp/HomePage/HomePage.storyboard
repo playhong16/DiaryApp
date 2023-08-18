@@ -132,11 +132,12 @@
                         <outlet property="categoryButton" destination="t7y-xI-Ti6" id="t23-Uu-dPq"/>
                         <outlet property="floatingActionButton" destination="eEu-6Y-q3l" id="Msi-sV-uff"/>
                         <outlet property="tableView" destination="isd-rR-PZ4" id="lqf-NH-SgV"/>
+                        <segue destination="AaG-ev-lly" kind="show" identifier="ShowDetail" id="gqF-qm-Whr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="-449"/>
+            <point key="canvasLocation" x="599" y="-449"/>
         </scene>
         <!--DetailPageController-->
         <scene sceneID="oba-dt-3t3">
@@ -146,8 +147,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOq-ED-oOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-449"/>
-            <point key="canvasLocation" x="1066" y="-456"/>
+            <point key="canvasLocation" x="1646" y="-538"/>
         </scene>
         <!--AddPage-->
         <scene sceneID="0bI-T2-Jzt">
@@ -181,7 +181,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6F-ik-Zmf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="-456"/>
+            <point key="canvasLocation" x="-83" y="-449"/>
         </scene>
     </scenes>
     <resources>
