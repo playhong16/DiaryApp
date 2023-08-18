@@ -12,7 +12,6 @@ enum Emotion: String, CaseIterable {
     case angry = "화남"
     case nomal = "보통"
     case sad = "슬픔"
-    case neutral = "중립"
     
     var color: UIColor {
         switch self {

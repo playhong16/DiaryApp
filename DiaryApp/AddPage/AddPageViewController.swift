@@ -110,7 +110,7 @@ class AddPageViewController: UIViewController, UITextFieldDelegate {
         let currentDate = Date()
         
         // Diary 객체 생성
-        let newDiary = Diary(title: title, date: currentDate, emotion: selectedEmotion ?? .neutral, content: content, isLiked: false)
+        let newDiary = Diary(title: title, date: currentDate, emotion: selectedEmotion ?? .happy, content: content, isLiked: false)
         
         // 데이터 관리자를 통해 일기 저장
         DataManager.shared.saveDiary(data: newDiary)

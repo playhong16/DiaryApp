@@ -34,7 +34,7 @@ class MyPageViewController: UIViewController {
     }
     
     @IBAction func getData(_ sender: UIButton) {
-        let data = Diary(title: "hello", date: pickedDate, emotion: .sad, content: UUID().uuidString)
+        let data = Diary(title: "hello", date: pickedDate, emotion: .sad, content: UUID().uuidString, isLiked: true)
         dataManager.saveDiary(data: data)
         
         viewModel.selectDate(date: pickedDate)
