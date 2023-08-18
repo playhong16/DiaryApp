@@ -73,9 +73,11 @@
                         <outlet property="emotionButton" destination="985-F8-QYC" id="UXP-dQ-9Tw"/>
                         <outlet property="memoContent" destination="D9C-uT-6h7" id="Rj1-PL-f23"/>
                         <outlet property="memoTitle" destination="3WO-BB-9IL" id="aZP-BS-MuH"/>
+                        <segue destination="5cg-1s-4Bl" kind="unwind" identifier="saveFromAddPage" unwindAction="saveFromAddPage:" id="rV0-a9-1LG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5cg-1s-4Bl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="611" y="-54"/>
         </scene>

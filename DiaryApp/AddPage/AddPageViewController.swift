@@ -114,7 +114,6 @@ class AddPageViewController: UIViewController, UITextFieldDelegate {
         
         // 데이터 관리자를 통해 일기 저장
         DataManager.shared.saveDiary(data: newDiary)
-        
-        navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: "saveFromAddPage", sender: nil)
     }
 }

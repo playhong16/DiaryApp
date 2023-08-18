@@ -82,6 +82,11 @@ final class HomePageViewController: UIViewController {
         let menuItems = [allAges, teenager, twenties, thirties, forties]
         return menuItems
     }
+    
+    @IBAction func saveFromAddPage(_ sender: UIStoryboardSegue) {
+        let row = dataManager.getDiary().count - 1
+        tableView.insertRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+    }
 }
 
 // MARK: - Extension
