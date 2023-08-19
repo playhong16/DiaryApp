@@ -12,10 +12,10 @@ class TabBarController: UITabBarController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.tintColor = .customBeige
-        tabBar.barTintColor = .customDarkBeige
+        tabBar.tintColor = .white
+        tabBar.barTintColor = .clear
         tabBar.backgroundColor = .customDarkBeige
-        tabBar.unselectedItemTintColor = .white
+        tabBar.unselectedItemTintColor = .customBeige
         tabBar.layer.borderWidth = 1
         tabBar.layer.borderColor = UIColor.customDarkBeige.cgColor
     }

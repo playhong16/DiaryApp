@@ -31,7 +31,9 @@ final class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .customBeige
+        navigationItem.backBarButtonItem?.tintColor = .customBrown
         configureUI()
+        
     }
     
     // MARK: - Configure
