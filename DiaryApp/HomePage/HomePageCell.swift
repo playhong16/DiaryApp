@@ -20,9 +20,12 @@ class HomePageCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var heartBtn: UIButton!
     // MARK: - Properties
 
-
+    @IBAction func isLikedAction(_ sender: Any) {
+    }
+    
     // MARK: - Life Cycle
 
     override func awakeFromNib() {
