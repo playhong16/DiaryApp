@@ -22,9 +22,11 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moodLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var nickNameLabel: UILabel!
+//    @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var isLiked: UIButton!
+    @IBOutlet weak var baseLine: UILabel!
+    @IBOutlet weak var defaultLabel: UILabel! // 디폴드라벨(감정)
     
     // 선택한 셀 인덱스 값 받아오기
     var numOfPage: Int?
@@ -43,6 +45,7 @@ class DetailPageViewController: UIViewController {
         
         textViewSetUp()
         
+//        isLiked.layer.borderColor = UIColor.customDarkBeige.cgColor
         isLiked.addTarget(self, action: #selector(onClick), for: .touchUpInside)
     }
     
@@ -53,7 +56,6 @@ class DetailPageViewController: UIViewController {
         guard let numOfPage = numOfPage else {return}
         
         let diary = dataManager.getDiary()[numOfPage]
-        print("sender -> \(diary)")
         
         // Date to String
         let formatter = DateFormatter()
@@ -64,12 +66,13 @@ class DetailPageViewController: UIViewController {
         moodLabel.text = diary.emotion.title
         dateLabel.text = dateStr
         contentTextView.text = diary.content
+        defaultLabel.text = "나는 지금.."
         // nickname 가져와야함
-        nickNameLabel.text = "개굴개굴개구리" // 임시
+//        nickNameLabel.text = "개굴개굴개구리" // 임시
         
-        // font 설정
+        // design 설정
         configureLabelFont()
-        print("1 - \(diary.isLiked)")
+        configureLabelLayout()
     }
     
     // 좋아요 클릭 이벤트
@@ -82,15 +85,12 @@ class DetailPageViewController: UIViewController {
             diary.isLiked = true
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: true)
             dataManager.updateDiary(data: data)
-            print("2 - \(diary.isLiked)")
         }else{
             isLiked.setImage(UIImage(systemName: "heart"), for: .normal)
             diary.isLiked = false
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: false)
             dataManager.updateDiary(data: data)
-            print("3 - \(diary.isLiked)")
         }
-        print("4 - \(diary.isLiked)")
     }
 
     // 텍스트뷰 설정
@@ -98,16 +98,33 @@ class DetailPageViewController: UIViewController {
         // 수정 안되게
         contentTextView.isEditable = false
     }
-    
-    // 뒤로가기 (삭제예정)
-//    @IBAction func backBtn(_ sender: Any) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
+
     // 폰트 설정
     private func configureLabelFont() {
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
-        nickNameLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
-        dateLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
-        contentTextView.font = UIFont(name: "NanumSquareRoundL", size: 25)
+        titleLabel.font = UIFont(name: "NanumSquareRoundL", size: 25)
+//        nickNameLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
+        dateLabel.font = UIFont(name: "NanumSquareRoundL", size: 13)
+        contentTextView.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 28)
+        defaultLabel.font = UIFont(name: "NanumSquareRoundL", size: 13)
+    }
+    
+    private func configureLabelLayout(){
+        baseLine.layer.borderWidth = 1
+        baseLine.layer.borderColor = UIColor.customDarkBeige.cgColor
+//        titleLabel.layer.borderWidth = 1
+//        moodLabel.layer.borderWidth = 1
+//        dateLabel.layer.borderWidth = 1
+////        nickNameLabel.layer.borderWidth = 1
+//
+//        titleLabel.layer.cornerRadius = 8
+//        moodLabel.layer.cornerRadius = 8
+//        dateLabel.layer.cornerRadius = 8
+////        nickNameLabel.layer.cornerRadius = 8
+//
+//        titleLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
+//        moodLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
+//        dateLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
+////        nickNameLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
     }
 }
+
