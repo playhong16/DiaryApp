@@ -8,10 +8,10 @@
 import UIKit
 
 enum Emotion: String, CaseIterable {
-    case happy = "기쁨"
-    case angry = "화남"
-    case nomal = "보통"
-    case sad = "슬픔"
+    case happy = "😁"
+    case angry = "😡"
+    case nomal = "😐"
+    case sad = "😭"
     
     var color: UIColor {
         switch self {

@@ -26,10 +26,13 @@ class MyDetailViewController: UIViewController {
         
         configure()
         configMoodBtn()
+        setKeyboardObserver()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
+        removeKeyboardObserver()
     }
     
     deinit {
@@ -42,52 +45,93 @@ class MyDetailViewController: UIViewController {
     
     @IBAction func editBtn(_ sender: UIButton) {
         guard let diaryData = diaryData,
-              let title = titleTextField.text,
-              let selecteMood = selecteMood else { return }
-        let diary = Diary(id: diaryData.id, title: title, date: diaryData.date, emotion: selecteMood, content: diaryTextView.text, hashTag: diaryData.hashTag, image: diaryData.image, isLiked: diaryData.isLiked)
+              let title = titleTextField.text else { return }
+        if diaryData.title == title && diaryData.content == diaryTextView.text && diaryData.emotion == selecteMood { return }
+        let diary = Diary(id: diaryData.id,
+                          title: title,
+                          date: diaryData.date,
+                          emotion: selecteMood ?? diaryData.emotion,
+                          content: diaryTextView.text,
+                          hashTag: diaryData.hashTag,
+                          image: diaryData.image,
+                          isLiked: diaryData.isLiked)
         dataManager.updateDiary(data: diary)
         dismiss(animated: true) {
             self.reloading?()
         }
     }
     
+    override func keyboardWillShow(notification: NSNotification) {
+        guard titleTextField.isEditing != true else { return }
+        if self.view.window?.frame.origin.y == 0 {
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                UIView.animate(withDuration: 1) {
+                    self.view.window?.frame.origin.y -= keyboardHeight / 3
+                }
+            }
+        }
+    }
+    
+    override func keyboardWillHide(notification: NSNotification) {
+        if self.view.window?.frame.origin.y != 0 {
+            UIView.animate(withDuration: 1) {
+                self.view.window?.frame.origin.y = 0
+            }
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+}
+
+private extension MyDetailViewController {
     func configure() {
         guard let diaryData = diaryData else { return }
+        selecteMood = diaryData.emotion
+        
+        let dateStr = "\(DateFormatter.formatDate(date: diaryData.date)), \(DateFormatter.formatTime(date: diaryData.date))"
+        
         titleTextField.text = diaryData.title
-        diaryTextView.text = diaryData.content
-        dateLabel.text = "\(diaryData.date)"
+        dateLabel.text = dateStr
         moodBtn.setTitle(diaryData.emotion.title, for: .normal)
         moodBtn.backgroundColor = diaryData.emotion.color
+        diaryTextView.text = diaryData.content
+        diaryTextView.backgroundColor = .white
         
-        diaryTextView.layer.cornerRadius = 10
-        moodBtn.layer.cornerRadius = 10
+        diaryTextView.layer.cornerRadius = 8
+        moodBtn.layer.cornerRadius = 8
+        
+        view.backgroundColor = .customBeige
     }
     
     func configMoodBtn() {
-        let happy = UIAction(title: "기쁨") { [weak self] _ in
+        let happy = UIAction(title: "기쁨 \(Emotion.happy.title)") { [weak self] _ in
             guard let self = self else { return }
-            self.moodBtn.setTitle("기쁨", for: .normal)
+            self.moodBtn.setTitle(Emotion.happy.title, for: .normal)
             self.moodBtn.backgroundColor = Emotion.happy.color
             self.selecteMood = .happy
         }
         
-        let angry = UIAction(title: "화남") { [weak self] _ in
+        let angry = UIAction(title: "화남 \(Emotion.angry.title)") { [weak self] _ in
             guard let self = self else { return }
-            self.moodBtn.setTitle("화남", for: .normal)
+            self.moodBtn.setTitle(Emotion.angry.title, for: .normal)
             self.moodBtn.backgroundColor = Emotion.angry.color
             self.selecteMood = .angry
         }
         
-        let nomal = UIAction(title: "보통") { [weak self] _ in
+        let nomal = UIAction(title: "보통 \(Emotion.nomal.title)") { [weak self] _ in
             guard let self = self else { return }
-            self.moodBtn.setTitle("보통", for: .normal)
+            self.moodBtn.setTitle(Emotion.nomal.title, for: .normal)
             self.moodBtn.backgroundColor = Emotion.nomal.color
             self.selecteMood = .nomal
         }
         
-        let sad = UIAction(title: "슬픔") { [weak self] _ in
+        let sad = UIAction(title: "슬픔 \(Emotion.sad.title)") { [weak self] _ in
             guard let self = self else { return }
-            self.moodBtn.setTitle("슬쁨", for: .normal)
+            self.moodBtn.setTitle(Emotion.sad.title, for: .normal)
             self.moodBtn.backgroundColor = Emotion.sad.color
             self.selecteMood = .sad
         }
@@ -97,12 +141,6 @@ class MyDetailViewController: UIViewController {
         moodBtn.showsMenuAsPrimaryAction = true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-}
-
-private extension MyDetailViewController {
     @objc func didTappedDismissBtn() {
         dismiss(animated: true)
     }
