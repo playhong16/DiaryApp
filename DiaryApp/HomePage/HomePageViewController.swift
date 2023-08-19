@@ -21,6 +21,14 @@ final class HomePageViewController: UIViewController {
     
     // MARK: - Properties
     
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.black
+        label.text = "TODAY"
+        label.font = UIFont(name: "NanumSquareRoundB", size: 24)
+        return label
+    }()
+    
     private var ageGroupMenu: UIMenu {
         let menu = UIMenu(title: "연령대별",children: createAgeGroupMenu())
         return menu
@@ -33,7 +41,7 @@ final class HomePageViewController: UIViewController {
         view.backgroundColor = .customBeige
         navigationItem.backBarButtonItem?.tintColor = .customBrown
         configureUI()
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: titleLabel)
     }
     
     // MARK: - Configure
