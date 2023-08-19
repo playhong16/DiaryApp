@@ -19,19 +19,23 @@ final class MyPageCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.layer.cornerRadius = 20
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 16
         contentView.layer.borderWidth = 5
-        contentView.layer.borderColor = .init(gray: 1, alpha: 1)
+        contentView.layer.borderColor = UIColor.customBeige.cgColor
     }
     
     func configure(data: Diary) {
         titleLabel.text = data.title
         contentLabel.text = data.content
-        timeLabel.text = "\(data.date)"
+        timeLabel.text = DateFormatter.formatTime(date: data.date)
         moodLabel.text = data.emotion.title
         
-        moodLabel.backgroundColor = data.emotion.color
-        moodLabel.layer.cornerRadius = 10
+//        moodLabel.backgroundColor = data.emotion.color
         moodLabel.clipsToBounds = true
+        
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
+        contentLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
+        moodLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
     }
 }

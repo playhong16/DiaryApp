@@ -37,6 +37,7 @@
 		33C136D32A8EAF1D002796A1 /* MyDetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */; };
 		33C136D52A8EAF2F002796A1 /* MyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */; };
 		33C136D82A8EB318002796A1 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C136D72A8EB318002796A1 /* KeyboardManager.swift */; };
+		33DF37902A90A792007DF2BA /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF378F2A90A792007DF2BA /* DateFormatter+.swift */; };
 		9B8BF7922A8C76E5005C230F /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */; };
 		9B8BF7942A8C77C3005C230F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */; };
 		9B8BF7982A8CBB20005C230F /* AgeGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */; };
@@ -78,6 +79,7 @@
 		33C136D22A8EAF1D002796A1 /* MyDetailPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDetailPage.storyboard; sourceTree = "<group>"; };
 		33C136D42A8EAF2F002796A1 /* MyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewController.swift; sourceTree = "<group>"; };
 		33C136D72A8EB318002796A1 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		33DF378F2A90A792007DF2BA /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		054D40C22A8CC44000408AD1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				33DF378F2A90A792007DF2BA /* DateFormatter+.swift */,
 				054D40C32A8CC45300408AD1 /* UIColor.swift */,
 			);
 			path = Extension;
@@ -357,6 +360,7 @@
 				330226C02A89FBB20070514E /* Job.swift in Sources */,
 				33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */,
 				330226BE2A89FA290070514E /* AgeGroup.swift in Sources */,
+				33DF37902A90A792007DF2BA /* DateFormatter+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
