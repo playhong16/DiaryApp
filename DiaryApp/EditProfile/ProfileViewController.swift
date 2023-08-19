@@ -24,15 +24,33 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateProfile()
         jobLabelSet()
         nameLabelSet()
         ePBSet()
         pIVSet()
         likeListSet()
         ageGroupLabelSet()
-        updateProfileFromUserDefaults()
         view.backgroundColor = .customBeige
+        }
+    
+    private func updateProfile() {
+        if let profile = ProfileManager.shared.getProfile() {
+            updateProfile(nickname: profile.nickName, image: profile.image, ageGroup: profile.age.title)
+        }
+    }
 
+    
+    func updateProfile(nickname: String?, image: UIImage?, ageGroup: String?) {
+            if let nickname = nickname {    // 정보 업데이트
+                nameLabel.text = nickname
+            }
+            if let image = image {
+                profileImageView.image = image
+            }
+            if let ageGroup = ageGroup {
+                ageGroupLabel.text = ageGroup
+            }
         }
     
     private func pIVSet() {
@@ -73,27 +91,6 @@ class ProfileViewController: UIViewController {
         
         }
     
-    func updateProfile(nickname: String?, image: UIImage?, ageGroup: String?) {
-            if let nickname = nickname {    // 정보 업데이트
-                nameLabel.text = nickname
-            }
-            if let image = image {
-                profileImageView.image = image
-            }
-            if let ageGroup = ageGroup {
-                ageGroupLabel.text = ageGroup
-            }
-        }
-    
-    
-        private func updateProfileFromUserDefaults() {
-            //사용자 정보 업데이트
-            let defaults = UserDefaults.standard
-            let editedNickname = defaults.string(forKey: "editedNickname")
-            let imageData = defaults.data(forKey: "editedImage")
-            let editedAgeGroup = defaults.string(forKey: "editedAgeGroup")
-            
-            updateProfile(nickname: editedNickname, image: UIImage(data: imageData ?? Data()), ageGroup: editedAgeGroup)
-        }
+ 
 }
 
