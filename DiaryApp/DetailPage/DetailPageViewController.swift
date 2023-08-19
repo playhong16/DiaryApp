@@ -69,25 +69,28 @@ class DetailPageViewController: UIViewController {
         
         // font 설정
         configureLabelFont()
+        print("1 - \(diary.isLiked)")
     }
     
     // 좋아요 클릭 이벤트
     @objc func onClick(){
         guard let numOfPage = numOfPage else {return}
-        let diary = dataManager.getDiary()[numOfPage]
+        var diary = dataManager.getDiary()[numOfPage]
         
         if diary.isLiked == false {
             isLiked.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            diary.isLiked = true
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: true)
             dataManager.updateDiary(data: data)
-            
+            print("2 - \(diary.isLiked)")
         }else{
             isLiked.setImage(UIImage(systemName: "heart"), for: .normal)
+            diary.isLiked = false
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: false)
             dataManager.updateDiary(data: data)
-            
+            print("3 - \(diary.isLiked)")
         }
-        
+        print("4 - \(diary.isLiked)")
     }
 
     // 텍스트뷰 설정
