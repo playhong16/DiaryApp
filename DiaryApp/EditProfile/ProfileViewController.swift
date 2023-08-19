@@ -12,33 +12,65 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
-    @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var pIV: UIImageView!
+    
+    @IBOutlet weak var ePB: UIButton!
+    @IBOutlet weak var likeList: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var jobLabel: UILabel!
     @IBOutlet weak var ageGroupLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        jobLabelSet()
         nameLabelSet()
+        ePBSet()
+        pIVSet()
+        likeListSet()
         ageGroupLabelSet()
         updateProfileFromUserDefaults()
+        view.backgroundColor = .customBeige
 
         }
     
-        
+    private func pIVSet() {
+        pIV.layer.borderWidth = 1
+        pIV.layer.borderColor = UIColor.customDarkBeige.cgColor
+        pIV.layer.cornerRadius = 8
+    }
+    
+        private func ePBSet() {
+            ePB.layer.borderWidth = 1
+            ePB.layer.borderColor = UIColor.customDarkBeige.cgColor
+            ePB.layer.cornerRadius = 8
+        }
+
+        private func likeListSet() {
+            likeList.layer.borderWidth = 1
+            likeList.layer.borderColor = UIColor.customDarkBeige.cgColor
+            likeList.layer.cornerRadius = 8
+        }
+    
+    
+        private func jobLabelSet() {
+            jobLabel.layer.borderWidth = 1
+            jobLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
+            jobLabel.layer.cornerRadius = 8
+        }
     
         private func nameLabelSet() {    // 닉네임 라벨 테두리 설정
-            nameLabel.layer.borderWidth = 1.0
-            nameLabel.layer.borderColor = UIColor.gray.cgColor
-            nameLabel.layer.cornerRadius = 5.0
-            // 닉네임 라벨 테두리 설정
+            nameLabel.layer.borderWidth = 1
+            nameLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
+            nameLabel.layer.cornerRadius = 8
         }
        
         private func ageGroupLabelSet() {    // 연령대 라벨 테두리 설정
-            ageGroupLabel.layer.borderWidth = 1.0
-            ageGroupLabel.layer.borderColor = UIColor.gray.cgColor
-            ageGroupLabel.layer.cornerRadius = 5.0
-          
+            ageGroupLabel.layer.cornerRadius = 8
+            ageGroupLabel.layer.borderWidth = 1
+            ageGroupLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
+        
         }
     
     func updateProfile(nickname: String?, image: UIImage?, ageGroup: String?) {
@@ -52,6 +84,7 @@ class ProfileViewController: UIViewController {
                 ageGroupLabel.text = ageGroup
             }
         }
+    
     
         private func updateProfileFromUserDefaults() {
             //사용자 정보 업데이트

@@ -27,28 +27,12 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        //선택된 연령대로 버튼의 타이틀 설정
-        selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
-       
-        // 연령대 버튼 좌측 정렬 설정
-        selectAgeGroupButton.contentHorizontalAlignment = .left
-       
-        // 연령대 버튼 테두리 설정
-        selectAgeGroupButton.layer.borderWidth = 1.0
-        selectAgeGroupButton.layer.borderColor = UIColor.gray.cgColor
-        selectAgeGroupButton.layer.cornerRadius = 5.0
         
-        //프로필 설정 이미지 크기 설정
-        profileImageView.contentMode = .scaleAspectFit
-        profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        profileImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive =  true
-        profileImageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
+        view.backgroundColor = .customBeige
         
-        // 닉네임 설정
-        nicknameTextField.text = userProfile.nickName
-        nicknameTextField.placeholder = "닉네임"
-        nicknameTextField.delegate = self
+        nTFSet()
+        sAGBSet()
+        profileIVSet()
         
         //키보드 설정
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -60,6 +44,37 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         profileImageView.isUserInteractionEnabled = true
     }
     
+    private func profileIVSet() {
+        profileImageView.contentMode = .scaleAspectFit
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        profileImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive =  true
+        profileImageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.customDarkBeige.cgColor
+        profileImageView.layer.cornerRadius = 8
+    }
+    
+    private func nTFSet() {
+        nicknameTextField.text = userProfile.nickName
+        nicknameTextField.placeholder = "닉네임"
+        nicknameTextField.delegate = self
+        nicknameTextField.backgroundColor = UIColor.customBeige
+        nicknameTextField.layer.borderWidth = 1
+        nicknameTextField.layer.borderColor = UIColor.customDarkBeige.cgColor
+        nicknameTextField.layer.cornerRadius = 8
+    }
+    private func sAGBSet() {
+        //선택된 연령대로 버튼의 타이틀 설정
+        selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
+        
+        // 연령대 버튼 좌측 정렬 설정
+        selectAgeGroupButton.contentHorizontalAlignment = .left
+        
+        // 연령대 버튼 테두리 설정
+        selectAgeGroupButton.layer.borderWidth = 1
+        selectAgeGroupButton.layer.borderColor = UIColor.customDarkBeige.cgColor
+        selectAgeGroupButton.layer.cornerRadius = 8
+    }
     // 화면이 사라질 때 키보드 관련 알림 제거
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -181,7 +196,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     
     //수정 완료 버튼
     @IBAction func editCompleteButton(_ sender: UIButton) {
-       
+        
         
         editedNickname = nicknameTextField.text
         editedImage = profileImageView.image
@@ -204,8 +219,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         
         // 프로필 뷰 컨트롤러로 화면 전환
         if let profileVC = UIStoryboard(name: "ProfilePage", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-              navigationController?.pushViewController(profileVC, animated: true)
-          }
-        
+            navigationController?.pushViewController(profileVC, animated: true)
+        }
     }
 }
