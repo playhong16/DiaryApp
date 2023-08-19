@@ -30,12 +30,9 @@ final class MyPageCell: UICollectionViewCell {
         contentLabel.text = data.content
         timeLabel.text = DateFormatter.formatTime(date: data.date)
         moodLabel.text = data.emotion.title
-        
-//        moodLabel.backgroundColor = data.emotion.color
         moodLabel.clipsToBounds = true
         
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 32)
         contentLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
-        moodLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
     }
 }

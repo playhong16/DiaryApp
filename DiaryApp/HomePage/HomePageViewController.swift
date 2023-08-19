@@ -44,6 +44,12 @@ final class HomePageViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: titleLabel)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     // MARK: - Configure
 
     private func configureUI() {
