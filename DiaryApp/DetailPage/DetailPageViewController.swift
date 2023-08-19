@@ -35,7 +35,10 @@ class DetailPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        view.backgroundColor = .customBeige
+        navigationItem.backBarButtonItem?.tintColor = .customBrown
+        contentTextView.backgroundColor = .customBeige
+        
         showDiary()
         
         textViewSetUp()
@@ -62,55 +65,49 @@ class DetailPageViewController: UIViewController {
         dateLabel.text = dateStr
         contentTextView.text = diary.content
         // nickname 가져와야함
-//        nickNameLabel.text =
+        nickNameLabel.text = "개굴개굴개구리" // 임시
+        
+        // font 설정
+        configureLabelFont()
+        print("1 - \(diary.isLiked)")
     }
     
-    // 좋아요 버튼 액션
-//    @IBAction func isLiked(_ sender: Any) {
-//        print("메서드")
-//        isLiked.addTarget(self, action: #selector(onClick), for: .touchUpInside)
-//    }
-    
+    // 좋아요 클릭 이벤트
     @objc func onClick(){
-        print("onclick")
-        guard let numOfPage = numOfPage else {return print("3434")}
-        let diary = dataManager.getDiary()[numOfPage]
+        guard let numOfPage = numOfPage else {return}
+        var diary = dataManager.getDiary()[numOfPage]
         
-        print(diary)
-        print("111")
         if diary.isLiked == false {
-            print("222")
             isLiked.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-//            diary.isLiked = true
+            diary.isLiked = true
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: true)
             dataManager.updateDiary(data: data)
-            
-            print(data)
+            print("2 - \(diary.isLiked)")
         }else{
-            print("333")
-//            diary.isLiked = false
             isLiked.setImage(UIImage(systemName: "heart"), for: .normal)
+            diary.isLiked = false
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: false)
             dataManager.updateDiary(data: data)
-            
-            print(data)
+            print("3 - \(diary.isLiked)")
         }
-        
+        print("4 - \(diary.isLiked)")
     }
 
-    
-    
     // 텍스트뷰 설정
     func textViewSetUp(){
         // 수정 안되게
         contentTextView.isEditable = false
     }
     
-    
-    // 뒤로가기
-    @IBAction func backBtn(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    // 뒤로가기 (삭제예정)
+//    @IBAction func backBtn(_ sender: Any) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+    // 폰트 설정
+    private func configureLabelFont() {
+        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
+        nickNameLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
+        dateLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
+        contentTextView.font = UIFont(name: "NanumSquareRoundL", size: 25)
     }
-    
-    
 }
