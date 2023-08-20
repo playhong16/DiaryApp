@@ -204,7 +204,7 @@
 				054D40FE2A8F901B00408AD1 /* AddPage */,
 				330620752A8EA83200B31541 /* MyPage */,
 				C33865AC2A8C6F9D0018A0DA /* DetailPage */,
-				9B8BF79D2A8CE219005C230F /* EditProfile */,
+				9B8BF79D2A8CE219005C230F /* ProfilePage */,
 				3321446C2A89C752008E1AFF /* Assets.xcassets */,
 				3321446E2A89C752008E1AFF /* LaunchScreen.storyboard */,
 				332144712A89C752008E1AFF /* Info.plist */,
@@ -240,7 +240,7 @@
 			path = MyDetailPage;
 			sourceTree = "<group>";
 		};
-		9B8BF79D2A8CE219005C230F /* EditProfile */ = {
+		9B8BF79D2A8CE219005C230F /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
 				9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */,
@@ -249,7 +249,7 @@
 				9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */,
 				9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */,
 			);
-			path = EditProfile;
+			path = ProfilePage;
 			sourceTree = "<group>";
 		};
 		C33865AC2A8C6F9D0018A0DA /* DetailPage */ = {

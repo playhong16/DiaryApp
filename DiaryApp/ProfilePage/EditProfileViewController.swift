@@ -29,9 +29,9 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         view.backgroundColor = .customBeige
         setSelectedAgeGroup()
         setProfileImageView()
-        nTFSet()
-        sAGBSet()
-        profileIVSet()
+        nicknameTextFieldSet()
+        selectAgeGroupButtonSet()
+        profileImageViewSet()
         
         navigationController?.navigationBar.tintColor = UIColor.customBrown
         navigationItem.backBarButtonItem?.tintColor = .customBrown
@@ -55,7 +55,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         selectedAgeGroup = userProfile.age
     }
     
-    private func profileIVSet() {
+    private func profileImageViewSet() {
         profileImageView.contentMode = .scaleAspectFit
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         profileImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive =  true
@@ -65,7 +65,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         profileImageView.layer.cornerRadius = 8
     }
     
-    private func nTFSet() {
+    private func nicknameTextFieldSet() {
         guard let userProfile = self.userProfile else {
             return
         }
@@ -77,7 +77,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         nicknameTextField.layer.borderColor = UIColor.customDarkBeige.cgColor
         nicknameTextField.layer.cornerRadius = 8
     }
-    private func sAGBSet() {
+    private func selectAgeGroupButtonSet() {
         //선택된 연령대로 버튼의 타이틀 설정
         selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
         

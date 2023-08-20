@@ -12,9 +12,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
-    
-    @IBOutlet weak var pIV: UIImageView!
-    
+ 
     @IBOutlet weak var editProfileButton: UIButton!
 
     @IBOutlet weak var likeList: UIButton!
@@ -29,7 +27,7 @@ class ProfileViewController: UIViewController {
         jobLabelSet()
         nameLabelSet()
         setEditProfileButton()
-        pIVSet()
+        profileImageViewSet()
         likeListSet()
         ageGroupLabelSet()
         view.backgroundColor = .customBeige
@@ -54,10 +52,10 @@ class ProfileViewController: UIViewController {
             }
         }
     
-    private func pIVSet() {
-        pIV.layer.borderWidth = 1
-        pIV.layer.borderColor = UIColor.customDarkBeige.cgColor
-        pIV.layer.cornerRadius = 8
+    private func profileImageViewSet() {
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.customDarkBeige.cgColor
+        profileImageView.layer.cornerRadius = 8
     }
     
     private func setEditProfileButton() {

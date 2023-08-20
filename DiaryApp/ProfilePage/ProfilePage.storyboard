@@ -133,7 +133,6 @@
                         <outlet property="jobLabel" destination="X0y-UY-7Zo" id="ADJ-WK-1sf"/>
                         <outlet property="likeList" destination="QsB-FM-qfN" id="zfx-HR-Hot"/>
                         <outlet property="nameLabel" destination="e2Z-bN-kHF" id="BCI-ea-jnP"/>
-                        <outlet property="pIV" destination="V5K-Tx-8tP" id="Dne-QU-4FY"/>
                         <outlet property="profileImageView" destination="V5K-Tx-8tP" id="JlC-2g-okZ"/>
                     </connections>
                 </viewController>
@@ -238,7 +237,7 @@
                                             <fragment content="닉네임">
                                                 <attributes>
                                                     <color key="NSColor" red="0.45490193369999998" green="0.41176474089999998" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <font key="NSFont" size="16" name=".AppleSDGothicNeoI-Regular"/>
+                                                    <font key="NSFont" metaFont="system" size="16"/>
                                                     <font key="NSOriginalFont" metaFont="system" size="18"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
