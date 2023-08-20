@@ -101,7 +101,7 @@ final class HomePageViewController: UIViewController {
     // MARK: - unwindSegue
 
     @IBAction func saveFromAddPage(_ sender: UIStoryboardSegue) {
-        let row = dataManager.getDiary().count - 1
+        let row = dataManager.getTodayDiaryList().count - 1
         tableView.insertRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
     }
 }
@@ -110,14 +110,17 @@ final class HomePageViewController: UIViewController {
 
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataManager.getDiary().count
+//        return dataManager.getDiary().count
+        print(dataManager.getDiary().count)
+        print(dataManager.getTodayDiaryList().count)
+        return dataManager.getTodayDiaryList().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomePageCell.identifier, for: indexPath) as? HomePageCell else {
             return UITableViewCell()
         }
-        let diary = dataManager.getDiary()[indexPath.row]
+        let diary = dataManager.getTodayDiaryList()[indexPath.row]
         cell.setupData(diary)
         return cell
     }
@@ -137,7 +140,6 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
             if let index = sender as? Int {
                 vc?.numOfPage = index
             }
-            
         }
     }
    

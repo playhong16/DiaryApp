@@ -32,6 +32,17 @@ final class DataManager {
         return DiaryList
     }
     
+    func getTodayDiaryList() -> [Diary] {
+        let date = Date()
+        let diaryList = DataManager.shared.getDiary()
+        let filteredList = diaryList.filter {
+            DateFormatter.formatDate(date: $0.date) == DateFormatter.formatDate(date: date)
+        }.sorted {
+            $0.date < $1.date
+        }
+        return filteredList
+    }
+    
     func updateDiary(data: Diary) {
         let index = DiaryList.firstIndex { $0.id == data.id }
         if let index = index {

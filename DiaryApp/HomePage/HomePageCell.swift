@@ -37,7 +37,7 @@ class HomePageCell: UITableViewCell {
         titleLabel.text = diary.title
         nicknameLabel.text = "개굴개굴개구리" // 임시
         moodLabel.text = diary.emotion.title
-        timeLabel.text = "14시 30분" // 임시
+        timeLabel.text = DateFormatter.formatTime(date: diary.date)
         configureUI()
         setHeartButton(isLiked: diary.isLiked)
     }
@@ -52,6 +52,13 @@ class HomePageCell: UITableViewCell {
             heartButton.setImage(image, for: .normal)
             heartButton.tintColor = .customBeige
         }
+    }
+    
+    private func setDateFormmat(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH시 mm분"
+        let dateStr = formatter.string(from: date)
+        return dateStr
     }
     
     private func configureUI() {

@@ -64,7 +64,7 @@ class DetailPageViewController: UIViewController {
     func showDiary(){
         guard let numOfPage = numOfPage else {return}
         
-        let diary = dataManager.getDiary()[numOfPage]
+        let diary = dataManager.getTodayDiaryList()[numOfPage]
         
         // Date to String
         let formatter = DateFormatter()
@@ -88,7 +88,7 @@ class DetailPageViewController: UIViewController {
     // 좋아요 클릭 이벤트
     @objc func onClick(){
         guard let numOfPage = numOfPage else {return}
-        var diary = dataManager.getDiary()[numOfPage]
+        var diary = dataManager.getTodayDiaryList()[numOfPage]
         
         if diary.isLiked == false {
             heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
