@@ -88,6 +88,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         //선택된 연령대로 버튼의 타이틀 설정
         let title = " " + selectedAgeGroup.title
         selectAgeGroupButton.setTitle(title, for: .normal)
+        selectAgeGroupButton.setTitleColor(.customBrown, for: .normal)
         
         // 연령대 버튼 좌측 정렬 설정
         selectAgeGroupButton.contentHorizontalAlignment = .left
@@ -132,6 +133,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
             self.selectedAgeGroup = selectedAgeGroup
             let title = " " + selectedAgeGroup.title
             selectAgeGroupButton.setTitle(title, for: .normal)
+            selectAgeGroupButton.titleLabel?.textColor = .customBrown
           
             // 선택된 연령대 저장
             guard let userProfile = self.userProfile else { return }

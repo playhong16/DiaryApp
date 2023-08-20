@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    
+    @IBOutlet weak var nicknameTitleLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var likeList: UIButton!
@@ -20,11 +22,10 @@ class ProfileViewController: UIViewController {
         
         nameLabelSet()
         setEditProfileButton()
-        profileImageViewSet()
-        likeListSet()
         ageGroupLabelSet()
         view.backgroundColor = .customBeige
         navigationController?.navigationBar.tintColor = .customBrown
+        configureLikeList()
 
     }
     
@@ -49,37 +50,28 @@ class ProfileViewController: UIViewController {
             ageGroupLabel.text = " " + ageGroup
         }
     }
-    
-    private func profileImageViewSet() {
-        profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.customDarkBeige.cgColor
-        profileImageView.layer.cornerRadius = 5
-    }
-    
     private func setEditProfileButton() {
+        profileImageView.layer.cornerRadius = 8
+        
         editProfileButton.layer.borderWidth = 1
         editProfileButton.layer.borderColor = UIColor.customDarkBeige.cgColor
         editProfileButton.layer.cornerRadius = 5
         editProfileButton.backgroundColor = .customDarkBeige
     }
-
-    private func likeListSet() {
-//        likeList.layer.borderWidth = 1
-//        likeList.layer.borderColor = UIColor.customDarkBeige.cgColor
-//        likeList.layer.cornerRadius = 8
+    
+    private func configureLikeList() {
+        likeList.layer.cornerRadius = 5
+        likeList.layer.borderWidth = 1
+        likeList.layer.borderColor = UIColor.customDarkBeige.cgColor
+        likeList.setTitleColor(.customDarkBeige, for: .normal)
     }
     
     private func nameLabelSet() {    // 닉네임 라벨 테두리 설정
-        nameLabel.layer.borderWidth = 1
-        nameLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
-        nameLabel.layer.cornerRadius = 5
+        nicknameTitleLabel.textColor = .customBrown
         nameLabel.textColor = .customBrown
     }
        
     private func ageGroupLabelSet() {    // 연령대 라벨 테두리 설정
-        ageGroupLabel.layer.cornerRadius = 5
-        ageGroupLabel.layer.borderWidth = 1
-        ageGroupLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
         ageGroupLabel.textColor = .customBrown
     }
 }
