@@ -37,7 +37,7 @@ class HomePageCell: UITableViewCell {
         titleLabel.text = diary.title
         nicknameLabel.text = "개굴개굴개구리" // 임시
         moodLabel.text = diary.emotion.title
-        timeLabel.text = setDateFormmat(diary.date)
+        timeLabel.text = DateFormatter.formatTime(date: diary.date)
         configureUI()
         setHeartButton(isLiked: diary.isLiked)
     }

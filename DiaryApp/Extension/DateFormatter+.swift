@@ -16,7 +16,7 @@ extension DateFormatter {
     
     static func formatTime(date: Date) -> String {
         let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm"
+        timeFormatter.dateFormat = "HH시 mm분"
         return timeFormatter.string(from: date)
     }
     
