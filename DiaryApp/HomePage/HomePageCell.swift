@@ -54,13 +54,6 @@ class HomePageCell: UITableViewCell {
         }
     }
     
-    private func setDateFormmat(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH시 mm분"
-        let dateStr = formatter.string(from: date)
-        return dateStr
-    }
-    
     private func configureUI() {
         self.selectionStyle = .none
         configureContentView()
