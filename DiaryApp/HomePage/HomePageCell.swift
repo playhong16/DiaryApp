@@ -35,7 +35,7 @@ class HomePageCell: UITableViewCell {
     
     func setupData(_ diary: Diary) {
         titleLabel.text = diary.title
-        nicknameLabel.text = "개굴개굴개구리" // 임시
+        nicknameLabel.text = ProfileManager.shared.getProfile()?.nickName
         moodLabel.text = diary.emotion.title
         timeLabel.text = DateFormatter.formatTime(date: diary.date)
         configureUI()
