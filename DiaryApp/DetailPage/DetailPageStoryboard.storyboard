@@ -80,7 +80,7 @@
                         <outlet property="contentTextView" destination="Zk5-Sb-6H8" id="jes-9v-Gde"/>
                         <outlet property="dateLabel" destination="gAU-rz-5nA" id="EbY-eZ-Y7c"/>
                         <outlet property="defaultLabel" destination="far-ZG-dpH" id="IIe-9e-4TI"/>
-                        <outlet property="isLiked" destination="tb7-bh-1mw" id="I3B-IC-4Cz"/>
+                        <outlet property="heartButton" destination="tb7-bh-1mw" id="bih-1G-A8e"/>
                         <outlet property="moodLabel" destination="KfW-6g-LlZ" id="qYD-wH-Rfc"/>
                         <outlet property="titleLabel" destination="4HI-59-f5j" id="tOP-yQ-a6m"/>
                         <outlet property="view" destination="5EZ-qb-Rvc" id="4dg-jh-WnH"/>

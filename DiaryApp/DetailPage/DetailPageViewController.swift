@@ -24,7 +24,7 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
 //    @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var isLiked: UIButton!
+    @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var baseLine: UILabel!
     @IBOutlet weak var defaultLabel: UILabel! // 디폴드라벨(감정)
     
@@ -46,7 +46,16 @@ class DetailPageViewController: UIViewController {
         textViewSetUp()
         
 //        isLiked.layer.borderColor = UIColor.customDarkBeige.cgColor
-        isLiked.addTarget(self, action: #selector(onClick), for: .touchUpInside)
+        heartButton.addTarget(self, action: #selector(onClick), for: .touchUpInside)
+    }
+    
+    // MARK: - Setting
+    private func setHeartButton(isLiked: Bool) {
+        if isLiked {
+            heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
     // MARK: - Action
@@ -73,6 +82,7 @@ class DetailPageViewController: UIViewController {
         // design 설정
         configureLabelFont()
         configureLabelLayout()
+        setHeartButton(isLiked: diary.isLiked)
     }
     
     // 좋아요 클릭 이벤트
@@ -81,12 +91,12 @@ class DetailPageViewController: UIViewController {
         var diary = dataManager.getDiary()[numOfPage]
         
         if diary.isLiked == false {
-            isLiked.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             diary.isLiked = true
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: true)
             dataManager.updateDiary(data: data)
-        }else{
-            isLiked.setImage(UIImage(systemName: "heart"), for: .normal)
+        } else {
+            heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
             diary.isLiked = false
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: false)
             dataManager.updateDiary(data: data)

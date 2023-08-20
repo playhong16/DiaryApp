@@ -46,7 +46,6 @@ final class HomePageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tableView.reloadData()
     }
     
@@ -65,7 +64,7 @@ final class HomePageViewController: UIViewController {
     
     func configureCategoryButton() {
         categoryButton.menu = ageGroupMenu
-        categoryButton.titleLabel?.font = UIFont(name: "NanumSquareRoundL", size: 12)
+        categoryButton.titleLabel?.font = UIFont(name: "NanumSquareRoundL", size: 14)
         categoryButton.backgroundColor = .white
         categoryButton.layer.borderWidth = 1
         categoryButton.layer.borderColor = UIColor.customDarkBeige.cgColor
@@ -78,7 +77,6 @@ final class HomePageViewController: UIViewController {
         floatingActionButton.layer.borderWidth = 1
         floatingActionButton.layer.borderColor = UIColor.customBeige.cgColor
     }
-    
     
     private func createAgeGroupMenu() -> [UIAction] {
         let allAges = UIAction(title: "전체") { action in
@@ -100,6 +98,8 @@ final class HomePageViewController: UIViewController {
         return menuItems
     }
     
+    // MARK: - unwindSegue
+
     @IBAction func saveFromAddPage(_ sender: UIStoryboardSegue) {
         let row = dataManager.getDiary().count - 1
         tableView.insertRows(at: [IndexPath(row: row, section: 0)], with: .automatic)

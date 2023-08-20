@@ -19,24 +19,14 @@ class HomePageCell: UITableViewCell {
     @IBOutlet weak var moodLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var heartButton: UIButton!
     
-    @IBOutlet weak var heartBtn: UIButton!
     // MARK: - Properties
 
     @IBAction func isLikedAction(_ sender: Any) {
     }
     
     // MARK: - Life Cycle
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -49,6 +39,19 @@ class HomePageCell: UITableViewCell {
         moodLabel.text = diary.emotion.title
         timeLabel.text = "14시 30분" // 임시
         configureUI()
+        setHeartButton(isLiked: diary.isLiked)
+    }
+    
+    private func setHeartButton(isLiked: Bool) {
+        if isLiked {
+            let image = UIImage(systemName: "heart.fill")
+            heartButton.setImage(image, for: .normal)
+            heartButton.tintColor = .customDarkBeige
+        } else {
+            let image = UIImage(systemName: "heart")
+            heartButton.setImage(image, for: .normal)
+            heartButton.tintColor = .customBeige
+        }
     }
     
     private func configureUI() {
