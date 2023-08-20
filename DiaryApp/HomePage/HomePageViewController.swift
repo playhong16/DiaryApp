@@ -110,9 +110,6 @@ final class HomePageViewController: UIViewController {
 
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return dataManager.getDiary().count
-        print(dataManager.getDiary().count)
-        print(dataManager.getTodayDiaryList().count)
         return dataManager.getTodayDiaryList().count
     }
     
@@ -129,7 +126,6 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 선택된 셀의 항목 출력
         performSegue(withIdentifier: "ShowDetail", sender: indexPath.row)
-        
     }
     
     // 셀 선택 시 디테일 페이지 이동
@@ -142,5 +138,4 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
-   
 }

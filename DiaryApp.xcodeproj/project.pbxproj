@@ -247,13 +247,13 @@
 		9B8BF79D2A8CE219005C230F /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
+				9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */,
 				9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */,
 				9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */,
 				9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */,
 				9BA726EE2A9211B8005B8CEC /* LikeListPageViewController.swift */,
 				9BA726F02A9213B1005B8CEC /* LikeListPageTableViewCell.swift */,
 				9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */,
-				9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";

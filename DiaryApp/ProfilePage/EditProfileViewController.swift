@@ -10,7 +10,6 @@ import UIKit
 
 class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
     
-    @IBOutlet weak var editCompleteButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var selectAgeGroupButton: UIButton!
@@ -37,10 +36,6 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         navigationItem.backBarButtonItem?.tintColor = .customBrown
         
         setKeyboardObserver()
-
-        //키보드 설정
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         //이미지 탭 제스쳐
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
@@ -107,28 +102,6 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         selectAgeGroupButton.layer.borderColor = UIColor.customDarkBeige.cgColor
         selectAgeGroupButton.layer.cornerRadius = 8
     }
-    // 화면이 사라질 때 키보드 관련 알림 제거
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-    
-    
-    
-//    // 키보드가 나타날때 화면 올리는 메서드
-//    @objc func keyboardWillShow(_ notification: Notification) {
-//        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
-//            let keyboardHeight = keyboardFrame.size.height - view.safeAreaInsets.bottom
-//            UIView.animate(withDuration: 0.3) {
-//                self.view.frame.origin.y = -keyboardHeight
-//            }
-//        }
-//    }
-//    // 키보드가 사라질때 화면 내리는 메서드
-//    @objc func keyboardWillHide(_ notification: Notification) {
-//        UIView.animate(withDuration: 0.3) {
-//            self.view.frame.origin.y = 0
-//        }
-//    }
     
     // 텍스트 필드의 퍈집이 끝났을 때 닉네임 업데이트
     func textFieldDidEndEditing(_ textField: UITextField) {
