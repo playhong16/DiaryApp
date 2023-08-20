@@ -51,13 +51,20 @@ class AddPageViewController: UIViewController {
         memoTitle.leftView = paddingView
         memoTitle.leftViewMode = .always
         memoTitle.borderStyle = .none
+        // 제목 플레이스홀더
+            memoTitle.placeholder = "제목을 입력해주세요"
+            memoTitle.textColor = UIColor.lightGray
+            memoTitle.delegate = self
         
         // memoContent 디자인 설정
         memoContent.layer.borderColor = UIColor.black.cgColor
         memoContent.layer.borderWidth = 1.0
         memoContent.layer.cornerRadius = 8
         memoContent.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
+        // 내용 플레이스홀더
+            memoContent.text = "내용을 입력해주세요"
+            memoContent.textColor = UIColor.lightGray
+            memoContent.delegate = self
         // emotionButton 디자인 설정
         emotionButton.menu = emotionMenu
         emotionButton.layer.borderColor = UIColor.black.cgColor
@@ -104,10 +111,27 @@ class AddPageViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         // 감정, 제목, 내용을 저장
         guard let title = memoTitle.text,
-              let content = memoContent.text,
-              !title.isEmpty, !content.isEmpty else {
-            // 필요한 정보가 입력되지 않았을 경우 처리
-            return
+                  let content = memoContent.text else {
+                showAlert(message: "제목과 내용을 입력해주세요")
+                return
+            }
+
+            // Check if title and content are empty or contain default text
+            if title.isEmpty && (content.isEmpty || content == "내용을 입력해주세요") {
+                showAlert(message: "제목과 내용을 입력해주세요")
+                return
+            } else if title.isEmpty {
+                showAlert(message: "제목을 입력해주세요")
+                return
+            } else if content.isEmpty || content == "내용을 입력해주세요" {
+                showAlert(message: "내용을 입력해주세요")
+                return
+            }
+        
+        func showAlert(message: String) {
+            let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
         
         let currentDate = Date()
@@ -121,11 +145,43 @@ class AddPageViewController: UIViewController {
 
 // MARK: - Extension
 
-extension AddPageViewController: UITextFieldDelegate {
+extension AddPageViewController: UITextFieldDelegate, UITextViewDelegate {
     
     // 텍스트 필드에서 Return 키를 눌렀을 때 호출되는 함수
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // 키보드 내리기
         return true
     }
+    
+    // 텍스트필드 편집을 시작할 때
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            if textField.text == "" {
+                textField.placeholder = ""
+                textField.textColor = UIColor.black
+            }
+        }
+
+        // 텍스트필드 편집을 끝낼 때
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            if textField.text?.isEmpty ?? true {
+                textField.placeholder = "제목을 입력해주세요"
+                textField.textColor = UIColor.lightGray
+            }
+        }
+    
+    // 텍스트뷰 편집을 시작할 때
+        func textViewDidBeginEditing(_ textView: UITextView) {
+            if textView.text == "내용을 입력해주세요" {
+                textView.text = ""
+                textView.textColor = UIColor.black
+            }
+        }
+
+        // 텍스트뷰 편집을 끝낼 때
+        func textViewDidEndEditing(_ textView: UITextView) {
+            if textView.text.isEmpty {
+                textView.text = "내용을 입력해주세요"
+                textView.textColor = UIColor.lightGray
+            }
+        }
 }
