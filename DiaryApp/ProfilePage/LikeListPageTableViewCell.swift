@@ -42,6 +42,7 @@ class LikeListPageTableViewCell: UITableViewCell {
         emotionLabel.text = data.emotion.title
         emotionLabel.clipsToBounds = true
         
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 28)
+        titleLabel.font = DiaryFont.titleFont
+        dateLabel.font = DiaryFont.timeFont
     }
 }

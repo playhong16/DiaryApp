@@ -67,8 +67,8 @@ class HomePageCell: UITableViewCell {
     }
     
     private func configureLabelFont() {
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
-        nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
-        timeLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
+        titleLabel.font = DiaryFont.titleFont
+        nicknameLabel.font = DiaryFont.nicknameFont
+        timeLabel.font = DiaryFont.timeFont
     }
 }
