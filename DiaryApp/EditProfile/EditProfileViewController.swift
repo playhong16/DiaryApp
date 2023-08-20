@@ -10,13 +10,9 @@ import UIKit
 
 class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
     
-    
     @IBOutlet weak var editCompleteButton: UIButton!
-    
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var nicknameTextField: UITextField!
-    
     @IBOutlet weak var selectAgeGroupButton: UIButton!
     
     // 사용자의 프로필 정보 저장
@@ -38,6 +34,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         profileIVSet()
         
         navigationController?.navigationBar.tintColor = UIColor.customBrown
+        navigationItem.backBarButtonItem?.tintColor = .customBrown
 
         //키보드 설정
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -207,10 +204,7 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         picker.dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    //수정 완료 버튼
-    @IBAction func editCompleteButton(_ sender: UIButton) {
+    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         // 초기화를 원하는 값으로 데이터를 초기화합니다.
 
         guard let newNickname = nicknameTextField.text,
@@ -227,7 +221,8 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         if let profileVC = UIStoryboard(name: "ProfilePage", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
             navigationController?.pushViewController(profileVC, animated: true)
         }
- }
+    }
+    
 }
 
 
