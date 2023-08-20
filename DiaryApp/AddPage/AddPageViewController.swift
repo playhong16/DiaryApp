@@ -17,6 +17,11 @@ class AddPageViewController: UIViewController {
     // 선택된 감정을 저장할 변수
     var selectedEmotion: Emotion?
     
+    private var emotionMenu: UIMenu {
+        let menu = UIMenu(title: "연령대별", children: createEmotionMenu())
+        return menu
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,9 +59,20 @@ class AddPageViewController: UIViewController {
         memoContent.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         // emotionButton 디자인 설정
+        emotionButton.menu = emotionMenu
         emotionButton.layer.borderColor = UIColor.black.cgColor
         emotionButton.layer.borderWidth = 1.0
         emotionButton.layer.cornerRadius = 8
+    }
+    
+    private func createEmotionMenu() -> [UIAction] {
+        let emotionAction = Emotion.allCases.map { emotion in
+            UIAction(title: emotion.title) { action in
+                self.selectedEmotion = emotion
+                self.emotionButton.setTitle(emotion.title, for: .normal)
+            }
+        }
+        return emotionAction
     }
     
     // MARK: - Keyboard
@@ -83,21 +99,6 @@ class AddPageViewController: UIViewController {
     }
     
     // MARK: - Interface Builder Action
-    
-    // 감정 버튼이 눌렸을 때 처리하는 함수
-    @IBAction func emotionButton(_ sender: UIButton) {
-        let emotionMenu = UIMenu(title: "감정 선택", options: .displayInline, children: Emotion.allCases.map { emotion in
-                UIAction(title: emotion.title, handler: { [weak self] _ in
-                    // 감정 선택 처리
-                    self?.selectedEmotion = emotion
-                    sender.setTitle(emotion.title, for: .normal)
-                    self?.view.layoutIfNeeded() // UI 업데이트 강제
-                })
-            })
-
-            let buttonMenu = UIMenu(title: "", children: [emotionMenu])
-            sender.menu = buttonMenu
-    }
     
     // 작성하기 버튼이 눌렸을 때 처리하는 함수
     @IBAction func saveButton(_ sender: Any) {
