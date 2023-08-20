@@ -32,7 +32,11 @@ final class MyPageCell: UICollectionViewCell {
         moodLabel.text = data.emotion.title
         moodLabel.clipsToBounds = true
         
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 28)
-        contentLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
+        titleLabel.font = DiaryFont.titleFont
+        contentLabel.font = DiaryFont.contentFont
+        timeLabel.font = DiaryFont.timeFont
+        
+        titleLabel.textColor = DiaryFont.fontColor
+        timeLabel.textColor = DiaryFont.fontColor
     }
 }

@@ -54,13 +54,6 @@ class HomePageCell: UITableViewCell {
         }
     }
     
-    private func setDateFormmat(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH시 mm분"
-        let dateStr = formatter.string(from: date)
-        return dateStr
-    }
-    
     private func configureUI() {
         self.selectionStyle = .none
         configureContentView()
@@ -74,8 +67,12 @@ class HomePageCell: UITableViewCell {
     }
     
     private func configureLabelFont() {
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
-        nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 14)
-        timeLabel.font = UIFont(name: "NanumSquareRoundL", size: 10)
+        titleLabel.font = DiaryFont.titleFont
+        nicknameLabel.font = DiaryFont.nicknameFont
+        timeLabel.font = DiaryFont.timeFont
+        
+        titleLabel.textColor = DiaryFont.fontColor
+        nicknameLabel.textColor = DiaryFont.fontColor
+        timeLabel.textColor = DiaryFont.fontColor
     }
 }

@@ -31,10 +31,6 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         nicknameTextFieldSet()
         selectAgeGroupButtonSet()
         profileImageViewSet()
-        
-        navigationController?.navigationBar.tintColor = UIColor.customBrown
-        navigationItem.backBarButtonItem?.tintColor = .customBrown
-        
         setKeyboardObserver()
         
         //이미지 탭 제스쳐
@@ -61,7 +57,8 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     
     func setProfileImageView(){
         guard let userProfile = self.userProfile else { return }
-        profileImageView.image = userProfile.image      }
+        profileImageView.image = UIImage(named: "camera")
+    }
     
     func setSelectedAgeGroup() {
         guard let userProfile = self.userProfile else { return }
@@ -73,34 +70,28 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         profileImageView.widthAnchor.constraint(equalToConstant: 200.0).isActive =  true
         profileImageView.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
-        profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.customDarkBeige.cgColor
         profileImageView.layer.cornerRadius = 8
     }
     
     private func nicknameTextFieldSet() {
-        guard let userProfile = self.userProfile else {
-            return
-        }
+        guard let userProfile = self.userProfile else { return }
         nicknameTextField.text = userProfile.nickName
         nicknameTextField.placeholder = "닉네임"
         nicknameTextField.delegate = self
-        nicknameTextField.backgroundColor = UIColor.customBeige
-        nicknameTextField.layer.borderWidth = 1
-        nicknameTextField.layer.borderColor = UIColor.customDarkBeige.cgColor
-        nicknameTextField.layer.cornerRadius = 8
+        nicknameTextField.layer.cornerRadius = 5
+        nicknameTextField.textColor = .customBrown
     }
     private func selectAgeGroupButtonSet() {
         //선택된 연령대로 버튼의 타이틀 설정
-        selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
-        
-        // 연령대 버튼 좌측 정렬 설정
-        selectAgeGroupButton.contentHorizontalAlignment = .left
+        let title = " " + selectedAgeGroup.title
+        selectAgeGroupButton.setTitle(title, for: .normal)
+        selectAgeGroupButton.setTitleColor(.customBrown, for: .normal)
         
         // 연령대 버튼 테두리 설정
-        selectAgeGroupButton.layer.borderWidth = 1
-        selectAgeGroupButton.layer.borderColor = UIColor.customDarkBeige.cgColor
-        selectAgeGroupButton.layer.cornerRadius = 8
+//        selectAgeGroupButton.layer.borderWidth = 1
+//        selectAgeGroupButton.layer.borderColor = UIColor.customDarkBeige.cgColor
+        selectAgeGroupButton.layer.cornerRadius = 5
+        selectAgeGroupButton.contentHorizontalAlignment = .center
     }
     
     // 텍스트 필드의 퍈집이 끝났을 때 닉네임 업데이트
@@ -135,7 +126,9 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
            
             // 선택된 연령대로 버튼의 타이틀 변경
             self.selectedAgeGroup = selectedAgeGroup
-            selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
+            let title = " " + selectedAgeGroup.title
+            selectAgeGroupButton.setTitle(title, for: .normal)
+            selectAgeGroupButton.titleLabel?.textColor = .customBrown
           
             // 선택된 연령대 저장
             guard let userProfile = self.userProfile else { return }
