@@ -41,13 +41,13 @@ class ProfileViewController: UIViewController {
     
     func updateProfile(nickname: String?, image: UIImage?, ageGroup: String?) {
         if let nickname = nickname {    // 정보 업데이트
-            nameLabel.text = " " + nickname
+            nameLabel.text = nickname
         }
         if let image = image {
             profileImageView.image = image
         }
         if let ageGroup = ageGroup {
-            ageGroupLabel.text = " " + ageGroup
+            ageGroupLabel.text = ageGroup
         }
     }
     private func setEditProfileButton() {
