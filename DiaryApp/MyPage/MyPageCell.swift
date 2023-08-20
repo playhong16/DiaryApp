@@ -35,5 +35,8 @@ final class MyPageCell: UICollectionViewCell {
         titleLabel.font = DiaryFont.titleFont
         contentLabel.font = DiaryFont.contentFont
         timeLabel.font = DiaryFont.timeFont
+        
+        titleLabel.textColor = DiaryFont.fontColor
+        timeLabel.textColor = DiaryFont.fontColor
     }
 }

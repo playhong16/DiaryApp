@@ -15,7 +15,7 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = .white
         tabBar.barTintColor = .clear
         tabBar.backgroundColor = .customDarkBeige
-        tabBar.unselectedItemTintColor = .customBrown
+        tabBar.unselectedItemTintColor = .customLightBeige
         tabBar.layer.borderWidth = 1
         tabBar.layer.borderColor = UIColor.customDarkBeige.cgColor
     }

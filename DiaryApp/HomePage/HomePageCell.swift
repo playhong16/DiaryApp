@@ -70,5 +70,9 @@ class HomePageCell: UITableViewCell {
         titleLabel.font = DiaryFont.titleFont
         nicknameLabel.font = DiaryFont.nicknameFont
         timeLabel.font = DiaryFont.timeFont
+        
+        titleLabel.textColor = DiaryFont.fontColor
+        nicknameLabel.textColor = DiaryFont.fontColor
+        timeLabel.textColor = DiaryFont.fontColor
     }
 }

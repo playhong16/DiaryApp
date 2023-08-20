@@ -8,8 +8,12 @@
 import UIKit
 
 enum DiaryFont {
-    static let titleFont = UIFont(name: "NanumDdarEGeEomMaGa", size: 28)
-    static let nicknameFont = UIFont(name: "NanumSquareRoundL", size: 14)
-    static let contentFont = UIFont(name: "NanumSquareRoundL", size: 14)
-    static let timeFont = UIFont(name: "NanumSquareRoundL", size: 10)
+    static let titleFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
+    static let fontColor = UIColor.customBrown
+    static let nicknameFont = UIFont.systemFont(ofSize: 14, weight: .semibold)
+    static let contentFont = UIFont(name: "NanumDdarEGeEomMaGa", size: 22)
+    static let textViewContentFont = UIFont(name: "NanumDdarEGeEomMaGa", size: 26)
+    static let timeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
 }
+
+
