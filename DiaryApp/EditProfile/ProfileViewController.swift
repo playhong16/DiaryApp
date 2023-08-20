@@ -15,7 +15,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var pIV: UIImageView!
     
-    @IBOutlet weak var ePB: UIButton!
+    @IBOutlet weak var editProfileButton: UIButton!
+
     @IBOutlet weak var likeList: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
@@ -27,12 +28,12 @@ class ProfileViewController: UIViewController {
         updateProfile()
         jobLabelSet()
         nameLabelSet()
-        ePBSet()
+        setEditProfileButton()
         pIVSet()
         likeListSet()
         ageGroupLabelSet()
         view.backgroundColor = .customBeige
-        }
+    }
     
     private func updateProfile() {
         if let profile = ProfileManager.shared.getProfile() {
@@ -59,10 +60,11 @@ class ProfileViewController: UIViewController {
         pIV.layer.cornerRadius = 8
     }
     
-    private func ePBSet() {
-        ePB.layer.borderWidth = 1
-        ePB.layer.borderColor = UIColor.customDarkBeige.cgColor
-        ePB.layer.cornerRadius = 8
+    private func setEditProfileButton() {
+        editProfileButton.layer.borderWidth = 1
+        editProfileButton.layer.borderColor = UIColor.customDarkBeige.cgColor
+        editProfileButton.layer.cornerRadius = 8
+        editProfileButton.backgroundColor = .customDarkBeige
     }
 
     private func likeListSet() {
