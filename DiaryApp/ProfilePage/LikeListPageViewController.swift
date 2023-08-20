@@ -37,24 +37,14 @@ class LikeListPageViewController: UIViewController{
 extension LikeListPageViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-      
         return DataManager.shared.getLikedDiary().count
-       
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = likeTableView.dequeueReusableCell(withIdentifier: "LikeListCell", for: indexPath) as! LikeListPageTableViewCell
         let diaryList = DataManager.shared.getLikedDiary()
         let diary = diaryList[indexPath.row]
-        cell.titleLabel.text = diary.title
-        cell.diaryLabel.text = diary.content
-        cell.emotionLabel.text = diary.emotion.title
-        cell.dateLabel.text = DateFormatter.formatDate(date: diary.date)
+        cell.configure(data: diary)
         return cell
     }
-    
-    
-    
-    
 }

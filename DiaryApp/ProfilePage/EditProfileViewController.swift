@@ -86,7 +86,8 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     }
     private func selectAgeGroupButtonSet() {
         //선택된 연령대로 버튼의 타이틀 설정
-        selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
+        let title = " " + selectedAgeGroup.title
+        selectAgeGroupButton.setTitle(title, for: .normal)
         
         // 연령대 버튼 좌측 정렬 설정
         selectAgeGroupButton.contentHorizontalAlignment = .left
@@ -129,7 +130,8 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
            
             // 선택된 연령대로 버튼의 타이틀 변경
             self.selectedAgeGroup = selectedAgeGroup
-            selectAgeGroupButton.setTitle("\(selectedAgeGroup.title)", for: .normal)
+            let title = " " + selectedAgeGroup.title
+            selectAgeGroupButton.setTitle(title, for: .normal)
           
             // 선택된 연령대 저장
             guard let userProfile = self.userProfile else { return }
