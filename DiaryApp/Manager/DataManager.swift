@@ -11,25 +11,45 @@ final class DataManager {
     static let shared = DataManager()
     private init() { }
     
-    private var DiaryList: [Diary] = [
+    private var likedDiaryList: [Diary] = []
+    
+    private var diaryList: [Diary] = [
         Diary(title: "swift 공부하자",
               date: DateFormatter.makeDummyDate(dateStr: "2023-08-21 15:46") ?? Date(),
               emotion: Emotion.happy,
               content: "힘내자 화이팅!!!!",
-              isLiked: true),
+              isLiked: false),
         Diary(title: "피곤쓰 하다 피곤쓰 하다 피곤쓰 하다 피곤쓰 하다",
               date: DateFormatter.makeDummyDate(dateStr: "2023-08-24 07:21") ?? Date(),
               emotion: Emotion.sad,
               content: "침대에 누워서 자자 침대에 누워서 자자 침대에 누워서 자자 침대에 누워서 자자 침대에 누워서 자자 침대에 누워서 자자",
               isLiked: false),
+        Diary(title: "오늘도 빡코딩!!",
+              date: DateFormatter.makeDummyDate(dateStr: "2023-08-21 20:35") ?? Date(),
+              emotion: Emotion.happy,
+              content: "빡코딩 화이팅 화이팅!!!!",
+              isLiked: false),
+        Diary(title: "소가 웃는소리를 세글자로 말하면?",
+              date: DateFormatter.makeDummyDate(dateStr: "2023-08-23 16:21") ?? Date(),
+              emotion: Emotion.happy,
+              content: "우하하 우하하",
+              isLiked: false),
     ]
-
+    
+    func getLikedDiary() -> [Diary] {
+        return likedDiaryList
+    }
+    
+    func saveLikedDiary(data: Diary) {
+        likedDiaryList.append(data)
+    }
+    
     func saveDiary(data: Diary) {
-        DiaryList.append(data)
+        diaryList.append(data)
     }
     
     func getDiary() -> [Diary] {
-        return DiaryList
+        return diaryList
     }
     
     func getTodayDiaryList() -> [Diary] {
@@ -44,16 +64,22 @@ final class DataManager {
     }
     
     func updateDiary(data: Diary) {
-        let index = DiaryList.firstIndex { $0.id == data.id }
+        let index = diaryList.firstIndex { $0.id == data.id }
         if let index = index {
-            DiaryList[index] = data
+            diaryList[index] = data
+        }
+    }
+    func removeLikedDiary(id: UUID){
+        let index = likedDiaryList.firstIndex { $0.id == id }
+        if let index = index {
+            likedDiaryList.remove(at: index)
         }
     }
     
     func removeDiary(id: UUID) {
-        let index = DiaryList.firstIndex { $0.id == id }
+        let index = diaryList.firstIndex { $0.id == id }
         if let index = index {
-            DiaryList.remove(at: index)
+            diaryList.remove(at: index)
         }
     }
 }

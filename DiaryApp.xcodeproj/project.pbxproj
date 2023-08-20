@@ -44,6 +44,8 @@
 		9B8BF7982A8CBB20005C230F /* AgeGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */; };
 		9B8BF79A2A8CBC2D005C230F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */; };
 		9B8BF79C2A8CC836005C230F /* AgeGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */; };
+		9BA726EF2A9211B8005B8CEC /* LikeListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA726EE2A9211B8005B8CEC /* LikeListPageViewController.swift */; };
+		9BA726F12A9213B1005B8CEC /* LikeListPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA726F02A9213B1005B8CEC /* LikeListPageTableViewCell.swift */; };
 		C33865AE2A8C6FCF0018A0DA /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */; };
 		C33865B02A8C701B0018A0DA /* DetailPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewController.swift; sourceTree = "<group>"; };
 		9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeGroupTableViewCell.swift; sourceTree = "<group>"; };
+		9BA726EE2A9211B8005B8CEC /* LikeListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeListPageViewController.swift; sourceTree = "<group>"; };
+		9BA726F02A9213B1005B8CEC /* LikeListPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeListPageTableViewCell.swift; sourceTree = "<group>"; };
 		C33865AD2A8C6FCF0018A0DA /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		C33865AF2A8C701B0018A0DA /* DetailPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +250,8 @@
 				9B8BF7932A8C77C3005C230F /* ProfileViewController.swift */,
 				9B8BF7992A8CBC2D005C230F /* EditProfileViewController.swift */,
 				9B8BF79B2A8CC836005C230F /* AgeGroupTableViewCell.swift */,
+				9BA726EE2A9211B8005B8CEC /* LikeListPageViewController.swift */,
+				9BA726F02A9213B1005B8CEC /* LikeListPageTableViewCell.swift */,
 				9B8BF7972A8CBB20005C230F /* AgeGroupTableViewController.swift */,
 				9B8BF7912A8C76E5005C230F /* ProfilePage.storyboard */,
 			);
@@ -354,6 +360,7 @@
 				33233AEF2A8D39F200418F37 /* ProfileManager.swift in Sources */,
 				330226BC2A89F4160070514E /* Profile.swift in Sources */,
 				054D41022A8F902600408AD1 /* AddPageViewController.swift in Sources */,
+				9BA726F12A9213B1005B8CEC /* LikeListPageTableViewCell.swift in Sources */,
 				330620792A8EA89000B31541 /* MyPageViewModel.swift in Sources */,
 				054D40FD2A8F8F7300408AD1 /* TabBarViewController.swift in Sources */,
 				05AEF0752A91BD09004B08C4 /* Constant.swift in Sources */,
@@ -373,6 +380,7 @@
 				33B8DA5E2A8A211600D44B2C /* DataManager.swift in Sources */,
 				330226BE2A89FA290070514E /* AgeGroup.swift in Sources */,
 				33DF37902A90A792007DF2BA /* DateFormatter+.swift in Sources */,
+				9BA726EF2A9211B8005B8CEC /* LikeListPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

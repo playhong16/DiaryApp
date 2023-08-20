@@ -24,6 +24,8 @@ class ProfileViewController: UIViewController {
         likeListSet()
         ageGroupLabelSet()
         view.backgroundColor = .customBeige
+        navigationController?.navigationBar.tintColor = .customBrown
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -95,11 +95,13 @@ class DetailPageViewController: UIViewController {
             diary.isLiked = true
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: true)
             dataManager.updateDiary(data: data)
+            dataManager.saveLikedDiary(data: data)
         } else {
             heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
             diary.isLiked = false
             let data = Diary(id: diary.id, title: diary.title, date: diary.date, emotion: diary.emotion, content: diary.content, hashTag: diary.hashTag, image: diary.image, isLiked: false)
             dataManager.updateDiary(data: data)
+            dataManager.removeLikedDiary(id: data.id)
         }
     }
 
