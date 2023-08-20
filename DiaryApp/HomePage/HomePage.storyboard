@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TODAY-->
+        <!--Home Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomePageViewController" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="TODAY" id="PUk-jK-QYS">
+                    <navigationItem key="navigationItem" id="PUk-jK-QYS">
                         <barButtonItem key="backBarButtonItem" title="Back" id="NhG-QG-fcT"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

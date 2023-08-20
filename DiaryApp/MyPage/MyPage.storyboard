@@ -151,11 +151,11 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-34.507042253521128"/>
         </scene>
-        <!--마이페이지-->
+        <!--Navigation Controller-->
         <scene sceneID="3gc-d0-2EO">
             <objects>
                 <navigationController storyboardIdentifier="MyPage" automaticallyAdjustsScrollViewInsets="NO" id="aBe-o7-NPo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="pencil" catalog="system" id="eME-j0-V2G"/>
+                    <tabBarItem key="tabBarItem" title="" image="pencil" catalog="system" id="eME-j0-V2G"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aV9-a4-fGt">

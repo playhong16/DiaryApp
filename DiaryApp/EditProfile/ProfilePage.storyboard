@@ -297,11 +297,11 @@
             </objects>
             <point key="canvasLocation" x="2606.8702290076335" y="-35.211267605633807"/>
         </scene>
-        <!--home-->
+        <!--Navigation Controller-->
         <scene sceneID="0mr-Tf-8zl">
             <objects>
                 <navigationController storyboardIdentifier="ProfilePage" automaticallyAdjustsScrollViewInsets="NO" id="DvJ-cW-mfk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="home" image="square.and.arrow.up" catalog="system" id="8t2-iJ-Dg6"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle" catalog="system" id="8t2-iJ-Dg6"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fhY-Jq-bM1">
@@ -358,7 +358,7 @@
     </scenes>
     <resources>
         <image name="normalProfile" width="292.33334350585938" height="311.33334350585938"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
