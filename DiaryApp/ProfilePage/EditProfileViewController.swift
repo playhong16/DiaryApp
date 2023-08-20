@@ -31,10 +31,6 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         nicknameTextFieldSet()
         selectAgeGroupButtonSet()
         profileImageViewSet()
-        
-        navigationController?.navigationBar.tintColor = UIColor.customBrown
-        navigationItem.backBarButtonItem?.tintColor = .customBrown
-        
         setKeyboardObserver()
         
         //이미지 탭 제스쳐
@@ -61,7 +57,8 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     
     func setProfileImageView(){
         guard let userProfile = self.userProfile else { return }
-        profileImageView.image = userProfile.image      }
+        profileImageView.image = userProfile.image
+    }
     
     func setSelectedAgeGroup() {
         guard let userProfile = self.userProfile else { return }
@@ -79,13 +76,10 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     }
     
     private func nicknameTextFieldSet() {
-        guard let userProfile = self.userProfile else {
-            return
-        }
+        guard let userProfile = self.userProfile else { return }
         nicknameTextField.text = userProfile.nickName
         nicknameTextField.placeholder = "닉네임"
         nicknameTextField.delegate = self
-        nicknameTextField.backgroundColor = UIColor.customBeige
         nicknameTextField.layer.borderWidth = 1
         nicknameTextField.layer.borderColor = UIColor.customDarkBeige.cgColor
         nicknameTextField.layer.cornerRadius = 8

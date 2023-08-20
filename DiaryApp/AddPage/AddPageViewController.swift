@@ -52,9 +52,9 @@ class AddPageViewController: UIViewController {
         memoTitle.leftViewMode = .always
         memoTitle.borderStyle = .none
         // 제목 플레이스홀더
-            memoTitle.placeholder = "제목을 입력해주세요"
-            memoTitle.textColor = UIColor.lightGray
-            memoTitle.delegate = self
+        memoTitle.placeholder = "제목을 입력해주세요"
+        memoTitle.textColor = UIColor.lightGray
+        memoTitle.delegate = self
         
         // memoContent 디자인 설정
         memoContent.layer.borderColor = UIColor.black.cgColor
@@ -62,9 +62,9 @@ class AddPageViewController: UIViewController {
         memoContent.layer.cornerRadius = 8
         memoContent.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         // 내용 플레이스홀더
-            memoContent.text = "내용을 입력해주세요"
-            memoContent.textColor = UIColor.lightGray
-            memoContent.delegate = self
+        memoContent.text = "내용을 입력해주세요"
+        memoContent.textColor = UIColor.lightGray
+        memoContent.delegate = self
         // emotionButton 디자인 설정
         emotionButton.menu = emotionMenu
         emotionButton.layer.borderColor = UIColor.black.cgColor
