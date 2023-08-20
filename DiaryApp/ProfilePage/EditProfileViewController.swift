@@ -35,15 +35,33 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         
         navigationController?.navigationBar.tintColor = UIColor.customBrown
         navigationItem.backBarButtonItem?.tintColor = .customBrown
+        
+        setKeyboardObserver()
 
         //키보드 설정
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         //이미지 탭 제스쳐
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
         profileImageView.addGestureRecognizer(tapGesture)
         profileImageView.isUserInteractionEnabled = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        removeKeyboardObserver()
+    }
+    
+    override func keyboardWillShow(notification: NSNotification) {
+        if self.view.window?.frame.origin.y == 0 {
+            if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                UIView.animate(withDuration: 1) {
+                    self.view.window?.frame.origin.y -= keyboardHeight / 3
+                }
+            }
+        }
     }
     
     func setProfileImageView(){
@@ -94,21 +112,23 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
-    // 키보드가 나타날때 화면 올리는 메서드
-    @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
-            let keyboardHeight = keyboardFrame.size.height - view.safeAreaInsets.bottom
-            UIView.animate(withDuration: 0.3) {
-                self.view.frame.origin.y = -keyboardHeight
-            }
-        }
-    }
-    // 키보드가 사라질때 화면 내리는 메서드
-    @objc func keyboardWillHide(_ notification: Notification) {
-        UIView.animate(withDuration: 0.3) {
-            self.view.frame.origin.y = 0
-        }
-    }
+    
+    
+//    // 키보드가 나타날때 화면 올리는 메서드
+//    @objc func keyboardWillShow(_ notification: Notification) {
+//        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+//            let keyboardHeight = keyboardFrame.size.height - view.safeAreaInsets.bottom
+//            UIView.animate(withDuration: 0.3) {
+//                self.view.frame.origin.y = -keyboardHeight
+//            }
+//        }
+//    }
+//    // 키보드가 사라질때 화면 내리는 메서드
+//    @objc func keyboardWillHide(_ notification: Notification) {
+//        UIView.animate(withDuration: 0.3) {
+//            self.view.frame.origin.y = 0
+//        }
+//    }
     
     // 텍스트 필드의 퍈집이 끝났을 때 닉네임 업데이트
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -154,6 +174,10 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
     // 프로필 이미지를 탭했을때의 메서드
     @objc func profileImageTapped() {
         showImagePickerAlert()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     //이미지 선택 옵션을 알려주는 알림창 메서드
@@ -218,12 +242,6 @@ class EditProfileViewController: UIViewController, AgeGroupDelegate, UITextField
         ProfileManager.shared.updateProfile(data: updatedProfile)
 
         // 화면 전환
-        if let profileVC = UIStoryboard(name: "ProfilePage", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-            navigationController?.pushViewController(profileVC, animated: true)
-        }
+        navigationController?.popViewController(animated: true)
     }
-    
 }
-
-
-

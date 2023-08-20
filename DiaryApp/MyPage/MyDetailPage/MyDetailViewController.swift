@@ -10,6 +10,8 @@ import Combine
 
 class MyDetailViewController: UIViewController {
     
+    @IBOutlet weak var dismissBtn: UIButton!
+    @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var moodBtn: UIButton!
@@ -39,11 +41,11 @@ class MyDetailViewController: UIViewController {
         print("deinit - MyDetailVC")
     }
     
-    @IBAction func dismissBtn(_ sender: UIButton) {
+    @IBAction func dismissBtnTapped(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
-    @IBAction func editBtn(_ sender: UIButton) {
+    @IBAction func editBtnTapped(_ sender: UIButton) {
         guard let diaryData = diaryData,
               let title = titleTextField.text else { return }
         if diaryData.title == title && diaryData.content == diaryTextView.text && diaryData.emotion == selecteMood { return }
@@ -74,14 +76,6 @@ class MyDetailViewController: UIViewController {
         }
     }
     
-    override func keyboardWillHide(notification: NSNotification) {
-        if self.view.window?.frame.origin.y != 0 {
-            UIView.animate(withDuration: 1) {
-                self.view.window?.frame.origin.y = 0
-            }
-        }
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -103,6 +97,9 @@ private extension MyDetailViewController {
         
         diaryTextView.layer.cornerRadius = 8
         moodBtn.layer.cornerRadius = 8
+        
+        dismissBtn.tintColor = .customBrown
+        editBtn.tintColor = .customBrown
         
         view.backgroundColor = .customBeige
     }

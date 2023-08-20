@@ -22,7 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="취소"/>
                                 <connections>
-                                    <action selector="dismissBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BKY-lD-KlE"/>
+                                    <action selector="dismissBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="M63-on-HYF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-42-x6S">
@@ -30,7 +30,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="수정"/>
                                 <connections>
-                                    <action selector="editBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rU1-ld-Pkv"/>
+                                    <action selector="editBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oRj-yx-Hsq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="오늘의 일기" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCi-Lq-aJr">
@@ -89,6 +89,8 @@
                     <connections>
                         <outlet property="dateLabel" destination="2Bx-pV-yhe" id="cvG-Rg-bkd"/>
                         <outlet property="diaryTextView" destination="QPf-GT-TNO" id="sbp-Dd-5Oy"/>
+                        <outlet property="dismissBtn" destination="L5N-ly-PAQ" id="Xqn-DQ-uKq"/>
+                        <outlet property="editBtn" destination="IcJ-42-x6S" id="BEo-Wi-IQN"/>
                         <outlet property="moodBtn" destination="Ky3-J4-ZNh" id="0g0-2A-L3w"/>
                         <outlet property="titleTextField" destination="LCi-Lq-aJr" id="FEX-gI-ERT"/>
                     </connections>

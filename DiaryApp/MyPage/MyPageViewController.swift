@@ -29,8 +29,8 @@ final class MyPageViewController: UIViewController {
         super.viewDidLoad()
 
         configure()
-        configCalender()
         configureCollectionView()
+        configCalender()
         bind()
     }
     
@@ -132,14 +132,15 @@ extension MyPageViewController: FSCalendarDelegate, FSCalendarDataSource, FSCale
         calendarView.scrollDirection = .horizontal
         // 캘린더의 cornerRadius 지정
         calendarView.layer.cornerRadius = 20
-        calendarView.headerHeight = 30
+        calendarView.headerHeight = 50
         calendarView.weekdayHeight = 30
         calendarView.backgroundColor = .customBeige
         
-        calendarView.appearance.titleFont = .systemFont(ofSize: 22, weight: .regular)
-        calendarView.appearance.weekdayFont = .systemFont(ofSize: 20, weight: .regular)
-        calendarView.appearance.headerTitleFont = .systemFont(ofSize: 20, weight: .regular)
-        
+        calendarView.appearance.titleFont = .systemFont(ofSize: 22, weight: .bold)
+        calendarView.appearance.weekdayFont = .systemFont(ofSize: 20, weight: .heavy)
+        calendarView.appearance.headerTitleFont = .systemFont(ofSize: 15, weight: .regular)
+        calendarView.appearance.headerTitleColor = .customBrown
+        calendarView.appearance.weekdayTextColor = .customDarkBeige
         viewModel.selectDate(date: Date())
     }
 

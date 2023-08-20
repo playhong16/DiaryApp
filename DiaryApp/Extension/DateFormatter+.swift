@@ -19,4 +19,17 @@ extension DateFormatter {
         timeFormatter.dateFormat = "HH:mm"
         return timeFormatter.string(from: date)
     }
+    
+    /// yyyy/MM/dd HH:mm 형식
+    static func makeDummyDate(dateStr: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        
+        if let date = dateFormatter.date(from: dateStr) {
+            return date
+        } else {
+            print("Invalid date format")
+            return nil
+        }
+    }
 }
