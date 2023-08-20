@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Page View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="AddPageViewController" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-uT-6h7">
+                                <rect key="frame" x="20" y="213.66666666666669" width="353" height="574.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zCa-bO-SVR">
+                                <rect key="frame" x="20" y="119.33333333333331" width="353" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3WO-BB-9IL">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="985-F8-QYC">
+                                        <rect key="frame" x="283" y="0.0" width="70" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="BaO-9u-qE1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="감정">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJH-ip-0md">
+                                <rect key="frame" x="20.000000000000004" y="79" width="36.333333333333343" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMt-0B-2fi">
+                                <rect key="frame" x="20.000000000000004" y="173.33333333333334" width="36.333333333333343" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zCa-bO-SVR" secondAttribute="trailing" constant="20" id="1Qr-3P-c4f"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D9C-uT-6h7" secondAttribute="trailing" constant="20" id="2Ie-HA-316"/>
+                            <constraint firstItem="IJH-ip-0md" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Ai1-d9-3DF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="D9C-uT-6h7" secondAttribute="bottom" constant="30" id="HEc-1e-SaS"/>
+                            <constraint firstItem="zCa-bO-SVR" firstAttribute="top" secondItem="IJH-ip-0md" secondAttribute="bottom" constant="15" id="Mqf-sg-dFV"/>
+                            <constraint firstItem="D9C-uT-6h7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VWw-mq-UVn"/>
+                            <constraint firstItem="IMt-0B-2fi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="aeP-5E-euy"/>
+                            <constraint firstItem="zCa-bO-SVR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="bjG-BS-kbq"/>
+                            <constraint firstItem="D9C-uT-6h7" firstAttribute="top" secondItem="IMt-0B-2fi" secondAttribute="bottom" constant="15" id="nEp-UC-QNW"/>
+                            <constraint firstItem="IJH-ip-0md" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="rf8-cN-4Wt"/>
+                            <constraint firstItem="IMt-0B-2fi" firstAttribute="top" secondItem="zCa-bO-SVR" secondAttribute="bottom" constant="20" id="vjG-pO-N0w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlv-eY-9NZ">
+                        <barButtonItem key="rightBarButtonItem" title="작성하기" id="UjU-D6-TKe">
+                            <connections>
+                                <action selector="saveButton:" destination="Y6W-OH-hqX" id="8fW-oY-9NX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emotionButton" destination="985-F8-QYC" id="UXP-dQ-9Tw"/>
+                        <outlet property="memoContent" destination="D9C-uT-6h7" id="Rj1-PL-f23"/>
+                        <outlet property="memoTitle" destination="3WO-BB-9IL" id="aZP-BS-MuH"/>
+                        <segue destination="5cg-1s-4Bl" kind="unwind" identifier="saveFromAddPage" unwindAction="saveFromAddPage:" id="rV0-a9-1LG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5cg-1s-4Bl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="-54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
