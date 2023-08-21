@@ -76,19 +76,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mJF-GH-Wca">
-                                                    <rect key="frame" x="16" y="16" width="361" height="137"/>
+                                                    <rect key="frame" x="25" y="25" width="343" height="119"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-7a-22a">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="26.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="25.333333333333332"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기 제목" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GP-1T-k0u">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="300.66666666666669" height="26.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="282.66666666666669" height="25.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="04:21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-S7-6wt">
-                                                                    <rect key="frame" x="315.66666666666669" y="0.0" width="45.333333333333314" height="26.333333333333332"/>
+                                                                    <rect key="frame" x="297.66666666666669" y="0.0" width="45.333333333333314" height="25.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -96,13 +96,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="일기 내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-vI-FP4">
-                                                            <rect key="frame" x="0.0" y="41.333333333333336" width="361" height="24.000000000000007"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333329" width="343" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😁" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27B-ip-dgJ">
-                                                            <rect key="frame" x="0.0" y="80.333333333333329" width="361" height="56.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="79.333333333333329" width="343" height="39.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -112,10 +112,10 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <constraints>
-                                                <constraint firstItem="mJF-GH-Wca" firstAttribute="top" secondItem="AeW-f2-sgM" secondAttribute="top" constant="16" id="Ppb-jM-Tyz"/>
-                                                <constraint firstAttribute="trailing" secondItem="mJF-GH-Wca" secondAttribute="trailing" constant="16" id="UC1-R2-y8n"/>
-                                                <constraint firstAttribute="bottom" secondItem="mJF-GH-Wca" secondAttribute="bottom" constant="16" id="xR6-73-3Rv"/>
-                                                <constraint firstItem="mJF-GH-Wca" firstAttribute="leading" secondItem="AeW-f2-sgM" secondAttribute="leading" constant="16" id="xTV-JY-lT9"/>
+                                                <constraint firstItem="mJF-GH-Wca" firstAttribute="top" secondItem="AeW-f2-sgM" secondAttribute="top" constant="25" id="Ppb-jM-Tyz"/>
+                                                <constraint firstAttribute="trailing" secondItem="mJF-GH-Wca" secondAttribute="trailing" constant="25" id="UC1-R2-y8n"/>
+                                                <constraint firstAttribute="bottom" secondItem="mJF-GH-Wca" secondAttribute="bottom" constant="25" id="xR6-73-3Rv"/>
+                                                <constraint firstItem="mJF-GH-Wca" firstAttribute="leading" secondItem="AeW-f2-sgM" secondAttribute="leading" constant="25" id="xTV-JY-lT9"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="169"/>
@@ -151,11 +151,11 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-34.507042253521128"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--MyPage-->
         <scene sceneID="3gc-d0-2EO">
             <objects>
                 <navigationController storyboardIdentifier="MyPage" automaticallyAdjustsScrollViewInsets="NO" id="aBe-o7-NPo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="pencil" catalog="system" id="eME-j0-V2G"/>
+                    <tabBarItem key="tabBarItem" title="MyPage" image="pencil" catalog="system" id="eME-j0-V2G"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aV9-a4-fGt">

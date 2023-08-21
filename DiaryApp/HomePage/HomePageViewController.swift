@@ -23,9 +23,9 @@ final class HomePageViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.black
+        label.textColor = UIColor.customDarkBeige
         label.text = "TODAY"
-        label.font = UIFont(name: "NanumSquareRoundB", size: 28)
+        label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         return label
     }()
     

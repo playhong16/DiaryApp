@@ -22,7 +22,7 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moodLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-//    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var baseLine: UILabel!
@@ -40,16 +40,13 @@ class DetailPageViewController: UIViewController {
         view.backgroundColor = .customBeige
         navigationItem.backBarButtonItem?.tintColor = .customBrown
         contentTextView.backgroundColor = .customBeige
-        
         showDiary()
-        
         textViewSetUp()
-        
-//        isLiked.layer.borderColor = UIColor.customDarkBeige.cgColor
         heartButton.addTarget(self, action: #selector(onClick), for: .touchUpInside)
     }
     
     // MARK: - Setting
+    
     private func setHeartButton(isLiked: Bool) {
         if isLiked {
             heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
@@ -67,9 +64,7 @@ class DetailPageViewController: UIViewController {
         let diary = dataManager.getTodayDiaryList()[numOfPage]
         
         // Date to String
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM / dd / yyyy"
-        let dateStr = formatter.string(from: diary.date)
+        let dateStr = DateFormatter.formatDate(date: diary.date)
         
         titleLabel.text = diary.title
         moodLabel.text = diary.emotion.title
@@ -77,7 +72,7 @@ class DetailPageViewController: UIViewController {
         contentTextView.text = diary.content
         defaultLabel.text = "나는 지금.."
         // nickname 가져와야함
-//        nickNameLabel.text = "개굴개굴개구리" // 임시
+        nicknameLabel.text = ProfileManager.shared.getProfile()?.nickName
         
         // design 설정
         configureLabelFont()
@@ -114,7 +109,7 @@ class DetailPageViewController: UIViewController {
     // 폰트 설정
     private func configureLabelFont() {
         titleLabel.font = UIFont(name: "NanumSquareRoundL", size: 25)
-//        nickNameLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
+        nicknameLabel.font = UIFont(name: "NanumSquareRoundL", size: 17)
         dateLabel.font = UIFont(name: "NanumSquareRoundL", size: 13)
         contentTextView.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 28)
         defaultLabel.font = UIFont(name: "NanumSquareRoundL", size: 13)
@@ -123,20 +118,6 @@ class DetailPageViewController: UIViewController {
     private func configureLabelLayout(){
         baseLine.layer.borderWidth = 1
         baseLine.layer.borderColor = UIColor.customDarkBeige.cgColor
-//        titleLabel.layer.borderWidth = 1
-//        moodLabel.layer.borderWidth = 1
-//        dateLabel.layer.borderWidth = 1
-////        nickNameLabel.layer.borderWidth = 1
-//
-//        titleLabel.layer.cornerRadius = 8
-//        moodLabel.layer.cornerRadius = 8
-//        dateLabel.layer.cornerRadius = 8
-////        nickNameLabel.layer.cornerRadius = 8
-//
-//        titleLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
-//        moodLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
-//        dateLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
-////        nickNameLabel.layer.borderColor = UIColor.customDarkBeige.cgColor
     }
 }
 

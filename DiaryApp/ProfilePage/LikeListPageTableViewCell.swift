@@ -39,9 +39,12 @@ class LikeListPageTableViewCell: UITableViewCell {
     func configure(data: Diary) {
         titleLabel.text = data.title
         dateLabel.text = DateFormatter.formatTime(date: data.date)
+        diaryLabel.text = data.content
         emotionLabel.text = data.emotion.title
         emotionLabel.clipsToBounds = true
         
-        titleLabel.font = UIFont(name: "NanumDdarEGeEomMaGa", size: 28)
+        titleLabel.font = DiaryFont.titleFont
+        dateLabel.font = DiaryFont.timeFont
+        diaryLabel.font = DiaryFont.contentFont
     }
 }
